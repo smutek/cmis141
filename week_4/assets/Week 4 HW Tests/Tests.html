@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style media="print">
+        table {
+            page-break-inside: avoid;
+        !important;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="titlearea">
+        <h1>Homework 2
+            <small>
+                <p>James Smutek, CMIS 141, Week 4</p>
+            </small>
+        </h1>
+    </div>
+    <div id="contentarea">
+        <div class="cell markdown-cell">
+            <h2>Default Constructor</h2>
+            <h3>Input</h3>
+
+                <table class="table table-bordered table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Data Type</th>
+                        <th>Value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>numStrings</code></td>
+                        <td>Integer</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarLength</code></td>
+                        <td>Double</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarManufacturer</code></td>
+                        <td>String</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarColor</code></td>
+                        <td>String</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            <h3>Output</h3>
+
+                <table class="table table-bordered table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>Method Name</th>
+                        <th>Expected Output</th>
+                        <th>Actual Output</th>
+                        <th>Pass/Fail</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>getNumStrings()</code></td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarLength()</code></td>
+                        <td>28.2</td>
+                        <td>28.2</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarManufacturer()</code></td>
+                        <td>Gibson</td>
+                        <td>Gibson</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarColor()</code></td>
+                        <td>Color.Red</td>
+                        <td>Color.Red</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>playGuitar()</code></td>
+                        <td>Random</td>
+                        <td><code>[A(0.5), C(0.5), C(2.0), D(4.0), E(0.5), C(1.0), C(1.0), D(2.0), G(1.0), D(0.5),
+                            C(4.0),
+                            G(0.5), G(0.25), E(4.0), G(4.0), F(1.0), A(0.25)]</code></td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>toString()</code></td>
+                        <td><code>Guitar{numStrings=6, guitarLength=28.2, guitarManufacturer='Gibson',
+                            guitarColor='Color.Red'}</code></td>
+                        <td><code>Guitar{numStrings=6, guitarLength=28.2, guitarManufacturer='Gibson',
+                            guitarColor='Color.Red'}</code></td>
+                        <td>Pass</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            <h2>Test 1</h2>
+            <h3>Input</h3>
+
+                <table class="table table-bordered table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Data Type</th>
+                        <th>Value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>numStrings</code></td>
+                        <td>Integer</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarLength</code></td>
+                        <td>Double</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarManufacturer</code></td>
+                        <td>String</td>
+                        <td>Ibanez</td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarColor</code></td>
+                        <td>String</td>
+                        <td>Color.White</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            <h3>Output</h3>
+
+                <table class="table table-bordered table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>Method Name</th>
+                        <th>Expected Output</th>
+                        <th>Actual Output</th>
+                        <th>Pass/Fail</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>getNumStrings()</code></td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarLength()</code></td>
+                        <td>26.0</td>
+                        <td>26.0</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarManufacturer()</code></td>
+                        <td>Ibanez</td>
+                        <td>Ibanez</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarColor()</code></td>
+                        <td>Color.White</td>
+                        <td>Color.White</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>playGuitar()</code></td>
+                        <td>Random</td>
+                        <td><code>[D(1.0), D(2.0), A(1.0), G(0.5), A(4.0), A(0.5), A(2.0), A(4.0), B(4.0), A(0.25),
+                            D(4.0),
+                            D(1.0), B(0.5), A(0.5), B(4.0), B(0.5), D(2.0)]</code></td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>toString()</code></td>
+                        <td><code>Guitar{numStrings=5, guitarLength=26.0, guitarManufacturer='Ibanez',
+                            guitarColor='Color.White'}</code></td>
+                        <td><code>Guitar{numStrings=5, guitarLength=26.0, guitarManufacturer='Ibanez',
+                            guitarColor='Color.White'}</code></td>
+                        <td>Pass</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            <h2>Test 2</h2>
+            <h3>Input</h3>
+
+                <table class="table table-bordered table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Data Type</th>
+                        <th>Value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>numStrings</code></td>
+                        <td>Integer</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarLength</code></td>
+                        <td>Double</td>
+                        <td>25.4</td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarManufacturer</code></td>
+                        <td>String</td>
+                        <td>Rickenbacker</td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarColor</code></td>
+                        <td>String</td>
+                        <td>Color.Black</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            <h3>Output</h3>
+
+                <table class="table table-bordered table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>Method Name</th>
+                        <th>Expected Output</th>
+                        <th>Actual Output</th>
+                        <th>Pass/Fail</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>getNumStrings()</code></td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarLength()</code></td>
+                        <td>25.4</td>
+                        <td>25.4</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarManufacturer()</code></td>
+                        <td>Rickenbacker</td>
+                        <td>Rickenbacker</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarColor()</code></td>
+                        <td>Color.Black</td>
+                        <td>Color.Black</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>playGuitar()</code></td>
+                        <td>Random</td>
+                        <td><code>[B(4.0), A(4.0), B(0.25), D(0.5), D(0.25), D(0.5), B(1.0), C(0.25), C(0.25), C(2.0),
+                            A(0.5),
+                            A(0.25), F(0.5), D(0.5), A(1.0), F(0.25), B(2.0)]</code></td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>toString()</code></td>
+                        <td><code>Guitar{numStrings=12, guitarLength=25.4, guitarManufacturer='Rickenbacker',
+                            guitarColor='Color.Black'}</code></td>
+                        <td><code>Guitar{numStrings=12, guitarLength=25.4, guitarManufacturer='Rickenbacker',
+                            guitarColor='Color.Black'}</code></td>
+                        <td>Pass</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            <h2>Test 3</h2>
+            <h3>Input</h3>
+
+                <table class="table table-bordered table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Data Type</th>
+                        <th>Value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>numStrings</code></td>
+                        <td>Integer</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarLength</code></td>
+                        <td>Double</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarManufacturer</code></td>
+                        <td>String</td>
+                        <td>Maharaja</td>
+                    </tr>
+                    <tr>
+                        <td><code>guitarColor</code></td>
+                        <td>String</td>
+                        <td>Color.Blue</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            <h3>Output</h3>
+
+                <table class="table table-bordered table-condensed table-striped">
+                    <thead>
+                    <tr>
+                        <th>Method Name</th>
+                        <th>Expected Output</th>
+                        <th>Actual Output</th>
+                        <th>Pass/Fail</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>getNumStrings()</code></td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarLength()</code></td>
+                        <td>42.0</td>
+                        <td>42.0</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarManufacturer()</code></td>
+                        <td>Majaraja</td>
+                        <td>Maharaja</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>getGuitarColor()</code></td>
+                        <td>Color.Blue</td>
+                        <td>Color.Blue</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>playGuitar()</code></td>
+                        <td>Random</td>
+                        <td><code>[B(1.0), F(1.0), B(2.0), F(0.5), F(4.0), C(4.0), D(0.5), D(0.5), C(0.25), A(0.25),
+                            B(0.25),
+                            G(4.0), B(1.0), D(4.0), E(0.5), B(0.5), D(0.25)]</code></td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><code>toString()</code></td>
+                        <td><code>Guitar{numStrings=21, guitarLength=42.0, guitarManufacturer='Maharaja',
+                            guitarColor='Color.Blue'}</code></td>
+                        <td><code>Guitar{numStrings=21, guitarLength=42.0, guitarManufacturer='Maharaja',
+                            guitarColor='Color.Blue'}</code></td>
+                        <td>Pass</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+        </div>
+        <h2>Program Execution</h2>
+        <p>Compiling and running of the program.</p>
+        <img class="img-responsive" src="run.png">
+    </div>
+</div>
+</body>
+</html>
+  
