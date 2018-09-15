@@ -111,9 +111,9 @@ public class Guitar {
     // Add notes and durations to the song.
     for (int i = 0; i <= barLength; i++) {
       // Select a random note value.
-      String noteValue = allowedNotes[randomIndex(1, totalNotes)];
+      String noteValue = allowedNotes[(randomIndex(1, totalNotes) - 1)];
       // Select a random note duration.
-      double durationValue = durationValues[randomIndex(1, totalDurationValues)];
+      double durationValue = durationValues[(randomIndex(1, totalDurationValues) - 1)];
       // Format no0te + duration sub string.
       String note = noteValue + "(" + Double.toString(durationValue) + ")";
       // If we aren't at the end of the loop, add a comma and space.
@@ -136,7 +136,9 @@ public class Guitar {
    * @return int The randomly generated integer.
    */
   private int randomIndex(int min, int max) {
+
     return (int) (Math.random() * ((max - min) + 1)) + min;
+
   }
 
   /**
