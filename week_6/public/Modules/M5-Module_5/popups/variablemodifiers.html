@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>VariableModifiers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../../../common/umucstyle.css" type="text/css" />
+<script type="text/javascript" src="../../../common/alpha.js"></script></head>
+<body>
+
+<p class="figuretitle"><span class="inlinecode">VariableModifiers</span></p>
+
+<p>As with local variables and methods, modifiers can also be associated with a 
+variable associated with a class. These 
+modifiers are <span class="inlinecode">static</span>, <span class="inlinecode">final</span>, 
+<span class="inlinecode">public</span>, <span class="inlinecode">private</span>, 
+and <span class="inlinecode">protected</span>. The use of the modifier 
+<span class="inlinecode">static</span> makes the variable a class variable, not 
+an instance variable. </p>
+
+<p>Static variables are never instance 
+variables, so <span class="inlinecode">static</span> should never be used as a 
+modifier for instance variables. Also, the <span class="inlinecode">protected</span> modifier has 
+meaning only when inheritance is used, so we will not consider it in this course.</p>
+
+<p>We have already discussed the <span class="inlinecode">final</span> modifier, 
+which gives a variable a fixed value. The variable cannot be changed if it is 
+used with a primitive that is an instance variable, so a <span class="inlinecode">final</span> 
+variable will be effectively the same for every object. Because there is no ability to store 
+data with each object using a <span class="inlinecode">final</span> variable that is a primitive, 
+the <span class="inlinecode">final</span> modifier should never be used with an instance 
+variable that is a primitive.</p>
+
+<p>There are uses of the <span class="inlinecode">final</span> modifier for object instance 
+variables, but these are related to how the Java VM handles some specific issues that are 
+outside the scope of this course. So the use of the <span class="inlinecode">final</span> 
+modifier will not be considered with instance variables.</p>
+
+<p>Therefore, the only modifiers that will be used in this class 
+with instance variables are <span class="inlinecode">private</span> and 
+<span class="inlinecode">public</span>. As we mentioned earlier, it is considered bad form to 
+declare a variable as anything but <span class="inlinecode">private</span>.</p>
+
+<div class="centered">
+<input type="button" value="Close" onclick="window.close();" />
+</div>
+</body>
+</html>

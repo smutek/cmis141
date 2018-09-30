@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Module 5 Commentary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="../../../common/umucstyle.css" type="text/css" />
+<script type="text/javascript" src="../../../common/alpha.js"></script>
+<script type="text/javascript" src="../../../common/mouseover/wide_mouseover_style.js"></script>
+<script type="text/javascript">
+<!--
+messages=new Array()
+//Write your descriptions in here.
+messages[0]=""
+messages[1]="<strong><span class\=\"inlinecode\">Method Documentation</span></strong> gives a brief description of the method. "
+messages[2]="<strong><span class\=\"inlinecode\">MethodModifiers</span></strong> tell whether this method is <span class\=\"inlinecode\">public</span> or <span class\=\"inlinecode\">private</span>. "
+messages[3]="<strong><span class\=\"inlinecode\">returnType</span></strong> gives the data type of any value returned. "
+messages[4]="<strong><span class\=\"inlinecode\">methodName</span></strong> is the name used to invoke the method. "
+messages[5]="<strong><span class\=\"inlinecode\">parmType parm1, paramType parm2, ...</span></strong> are the data used by the method to implement its behavior. "
+messages[6]="A <strong>brace</strong> begins the code block. "
+messages[7]="<strong><span class\=\"inlinecode\">type variableName = initialValue;</span></strong> defines the local variables used in the method. "
+messages[8]="<strong>The executable statements</strong> in the method are the control structures that implement the method's behavior. "
+messages[9]="<strong><span class\=\"inlinecode\">return value;</span></strong> is the return statement that returns a value and signals the end of the method. "
+messages[10]="A <strong>brace</strong> ends the code block. "
+messages[11]="To <strong>instantiate</strong> is to create an instance of the <span class\=\"inlinecode\">class</span>  "
+messages[12]="declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span> "
+messages[13]="An object <span class\=\"inlinecode\">Employee</span> is created, and its reference is assigned to <span class\=\"inlinecode\">employee1</span>. The rate of pay will be set to $6.50 per hour, and the number of hours worked will be set to 12.5."
+messages[14]="A single line declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span>, creates the object <span class\=\"inlinecode\">Employee</span>, assigns its reference to <span class\=\"inlinecode\">employee1</span>, and sets the rate of pay to $6.50 per hour and the number of hours worked to 12.5."
+messages[15]="Exceptions will be covered in another course. When <span class\=\"inlinecode\">Scanner</span> class or <span class\=\"inlinecode\">PrintWriter</span> class is invoked, &quot;throws exception&quot; must be used."
+messages[16]="creates a <span class\=\"inlinecode\">File</span> object"
+messages[17]="creates <span class\=\"inlinecode\">PrintWriter</span> "
+messages[18]="prints data to a file"
+messages[19]="Jane is owed 758.1"
+messages[20]="Tom is owed 862.68"
+messages[21]="emp1 id is 1"
+messages[22]="emp2 id is 2"
+messages[23]="total number of employees is 2"
+messages[24 ]="max is 9"
+messages[25]="c = D"
+messages[26]="c = X"
+messages[27]="CDE"
+messages[28]="s1 and s2 are equal"
+messages[29]="s1 and s2 are equivalent"
+messages[30]="s1 and s3 are equivalent"
+messages[31]="89"
+//To have more descriptions just add to the array.
+-->
+</script>
+
+</head>
+<body>
+<p></p>
+<!-- new overLIB library for mouseovers -->
+<div id="overDiv" style="position: absolute; visibility: hidden; z-index: 1000;"></div>
+<p>
+<script src="../../../common/mouseover/overlib.js" type="text/javascript">// <![CDATA[
+ overLIB (c) Erik Bosrup
+// ]]></script>
+</p>
+<h1>Module 5: Objects and Classes</h1>
+<p>As with class methods, many issues exist when using instance methods. Once again, these can be complex and can require many years of Java programming to comprehend fully. In this section, however, we will cover only the <span class="inlinecode">this</span> object.</p>
+<p>In Java, it is possible to give a variable local to a method the same name as a class variable. This use of the same name is called <em>shadowing a variable</em>. In setter methods, it is a common practice in Java to shadow the instance variable name with the name of the parameter. The problem then is how to refer to the instance variable in a method where a parameter has shadowed the instance variable name.</p>
+<p>You can access a shadowed instance variable name in a method by using a special object name, <span class="inlinecode">this</span>. The <span class="inlinecode">this</span> object is accessible in every instance method, and it refers to the object that was used to call the method. For example, we could write a <span class="inlinecode">Person</span> class with a <span class="inlinecode">setAge</span> method using the <span class="inlinecode">this</span> object in the setter method as shown in figure 5.V-1.</p>
+<p class="figuretitle">Figure 5.V-1<br /> Shadowing an Instance Variable</p>
+<div class="centered">
+<p><img alt="The figure illustrates shadowing an instance variable. " src="../images/fig4-iv-1.gif" height="195" width="495" /></p>
+</div>
+<p>The instance variable <span class="inlinecode">age</span> is now referred to by the name <span class="inlinecode">this.age</span>, which means the program will use the instance variable <span class="inlinecode">age</span> of the <span class="inlinecode">this</span> object (the object used when this method was called). The variable <span class="inlinecode"> age</span> (with no qualifier) is the parameter <span class="inlinecode">age</span>.</p>
+<p>This new <span class="inlinecode">Person</span> class can be used to create a number of different objects, as in the following <span class="inlinecode">main</span> method.</p>
+<pre class="code onetabindent">public static void main(String args[]) {
+   Person tom = new Person();
+   Person jane = new Person();
+
+   tom.setAge(40);
+   jane.setAge(29);
+}
+</pre>
+<p>In this <span class="inlinecode">main</span> method, two objects are created, one named <span class="inlinecode">tom</span> and the other <span class="inlinecode">jane</span>. When the <span class="inlinecode"> setAge</span> method is called using the <span class="inlinecode">tom</span> object, e.g.,</p>
+<pre class="code onetabindent">tom.setAge(40);
+</pre>
+<p>the <span class="inlinecode">this</span> object in the <span class="inlinecode"> setAge</span> method refers to the <span class="inlinecode">tom</span> object.</p>
+<p>When the <span class="inlinecode">setAge</span> method is called using the <span class="inlinecode">jane</span> object, e.g.,</p>
+<pre class="code onetabindent">jane.setAge(29);
+</pre>
+<p>the <span class="inlinecode">this</span> object refers to the <span class="inlinecode">jane</span> object.</p>
+<p>In Java, every instance variable in every instance method accesses the <span class="inlinecode">this</span> object. Note that in the <span class="inlinecode">Person</span> object above, the <span class="inlinecode"> getAge</span> method uses the <span class="inlinecode">this</span> object to return the <span class="inlinecode">age</span>.</p>
+<p>In the <span class="inlinecode">getAge</span> method, the <span class="inlinecode"> this</span> object is not needed because an instance variable that is not qualified by an object is assumed to use the <span class="inlinecode">this</span> object, and Java inserts the <span class="inlinecode">this</span> reference for you automatically.</p>
+<p>Although the use of shadowing of instance variables is common in Java, some programmers do not like it, believing no use of shadowing variables is ever justified. In fact, most Java programmers would agree that any use of shadowing except in setter methods or constructors is a bad practice.</p>
+<p>Many Java programming shops use shadowing in setter and constructor methods, and this use of shadowing is often a standard that programmers are expected to follow. Regardless, shadowing variables in setter methods and constructors is a prevalent practice, used by the majority of Java programmers, and so you should be aware of what shadowing is and know how to use it.</p>
+</body>
+</html>

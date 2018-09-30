@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Module 5 Commentary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="../../../common/umucstyle.css" type="text/css" />
+<script type="text/javascript" src="../../../common/alpha.js"></script>
+<script type="text/javascript" src="../../../common/mouseover/wide_mouseover_style.js"></script>
+<script type="text/javascript">
+<!--
+messages=new Array()
+//Write your descriptions in here.
+messages[0]=""
+messages[1]="<strong><span class\=\"inlinecode\">Method Documentation</span></strong> gives a brief description of the method. "
+messages[2]="<strong><span class\=\"inlinecode\">MethodModifiers</span></strong> tell whether this method is <span class\=\"inlinecode\">public</span> or <span class\=\"inlinecode\">private</span>. "
+messages[3]="<strong><span class\=\"inlinecode\">returnType</span></strong> gives the data type of any value returned. "
+messages[4]="<strong><span class\=\"inlinecode\">methodName</span></strong> is the name used to invoke the method. "
+messages[5]="<strong><span class\=\"inlinecode\">parmType parm1, paramType parm2, ...</span></strong> are the data used by the method to implement its behavior. "
+messages[6]="A <strong>brace</strong> begins the code block. "
+messages[7]="<strong><span class\=\"inlinecode\">type variableName = initialValue;</span></strong> defines the local variables used in the method. "
+messages[8]="<strong>The executable statements</strong> in the method are the control structures that implement the method's behavior. "
+messages[9]="<strong><span class\=\"inlinecode\">return value;</span></strong> is the return statement that returns a value and signals the end of the method. "
+messages[10]="A <strong>brace</strong> ends the code block. "
+messages[11]="To <strong>instantiate</strong> is to create an instance of the <span class\=\"inlinecode\">class</span>  "
+messages[12]="declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span> "
+messages[13]="An object <span class\=\"inlinecode\">Employee</span> is created, and its reference is assigned to <span class\=\"inlinecode\">employee1</span>. The rate of pay will be set to $6.50 per hour, and the number of hours worked will be set to 12.5."
+messages[14]="A single line declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span>, creates the object <span class\=\"inlinecode\">Employee</span>, assigns its reference to <span class\=\"inlinecode\">employee1</span>, and sets the rate of pay to $6.50 per hour and the number of hours worked to 12.5."
+messages[15]="Exceptions will be covered in another course. When <span class\=\"inlinecode\">Scanner</span> class or <span class\=\"inlinecode\">PrintWriter</span> class is invoked, \"throws exception\" must be used."
+messages[16]="creates a <span class\=\"inlinecode\">File</span> object"
+messages[17]="creates <span class\=\"inlinecode\">PrintWriter</span> "
+messages[18]="prints data to a file"
+messages[19]="Jane is owed 758.1"
+messages[20]="Tom is owed 862.68"
+messages[21]="emp1 id is 1"
+messages[22]="emp2 id is 2"
+messages[23]="total number of employees is 2"
+messages[24 ]="max is 9"
+messages[25]="c = D"
+messages[26]="c = X"
+messages[27]="CDE"
+messages[28]="s1 and s2 are equal"
+messages[29]="s1 and s2 are equivalent"
+messages[30]="s1 and s3 are equivalent"
+messages[31]="89"
+//To have more descriptions just add to the array.
+-->
+</script>
+
+</head>
+<body>
+<p></p>
+<!-- new overLIB library for mouseovers -->
+<div id="overDiv" style="position: absolute; visibility: hidden; z-index: 1000;"></div>
+<p>
+<script src="../../../common/mouseover/overlib.js" type="text/javascript">// <![CDATA[
+ overLIB (c) Erik Bosrup
+// ]]></script>
+</p>
+<h1>Module 5: Objects and Classes</h1>
+<h4>A. Object Overview</h4>
+<p>One example of using an object would be a program to determine an employee's pay, where that pay is calculated by multiplying the number of hours worked by the hourly pay rate. For the employee object, there would need to be two data fields&mdash;one for the hours worked and one for the pay rate per hour. There would also need to be behaviors that would give values to each of the data fields, as well as a behavior that calculates the pay for that employee. This scenario is represented by the following pseudocode:</p>
+<pre class="code onetabindent">Object Employee definition
+   Has data fields of
+      Rate of pay
+      Hours worked
+   Has behaviors of
+      Set rate of pay
+      Set hours worked
+      Calculate Pay
+</pre>
+<p>Using the pseudocode above, we can create the <span class="inlinecode">Employee</span> object. The class name would be <span class="inlinecode">Employee</span>. Its data fields would be <span class="inlinecode">payRate</span> and <span class="inlinecode">hoursWorked</span>. Both can be of the type <span class="inlinecode">double</span>. The behavior for the class will be defined by using methods to <span class="inlinecode">setPayRate</span>, <span class="inlinecode">setHoursWorked</span>, and <span class="inlinecode">calculatePay</span>. Additional information will be given about the creation of classes and the constructors (<span class="inlinecode">Employee()</span> and <span class="inlinecode">Employee(payRate: double, hoursWorked: double)</span> in section II-C of this module.</p>
+<h4>B. Creating Objects and the <span class="courier">new</span> Operator</h4>
+<p>To create an instance of a class, or an object, in Java, the <span class="inlinecode">new</span> operator is used. The <span class="inlinecode">new</span> operator does two things:</p>
+<ol>
+<li>It allocates space in which to store the data that will make up the Java object.</li>
+<li>It then calls a special method, called a <em>constructor</em>, which initializes the data.</li>
+</ol>
+<p>We will illustrate the use of the <span class="inlinecode">new</span> operator using <span class="inlinecode">Employee</span> as we create an instance of it called <span class="inlinecode">employee1</span>.</p>
+<p>Move your mouse over the highlighted lines to read the explanations.</p>
+<pre class="code onetabindent"><a href="javascript:;" onmouseover="overlib(messages[12])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;">Employee employee1;</span></a>
+<a href="javascript:;" onmouseover="overlib(messages[13])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"> employee1 = new Employee(6.50, 12.5);</span></a></pre>
+<p>We also can combine the two previous lines into one line:</p>
+<pre class="code onetabindent"><a href="javascript:;" onmouseover="overlib(messages[14])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;">Employee employee1 = new Employee(6.50, 12.5);</span></a></pre>
+<h4>C. Objects Are Defined by a Class</h4>
+<p>As we have seen in the previous section, one use of a class in Java is to create a type to define a variable. Because using a <span class="inlinecode">new</span> operation involves creating an instance of <span class="inlinecode">Employee</span>, it is sometimes called <em>instantiating</em> the object, and the object is called an <em>instance of the class</em>. Because an object is an instance of a class, the terms <em>object</em> and <em>instance</em> are used interchangeably in Java.</p>
+<p>We saw that on some occasions when a variable for an object is declared, the object that corresponds to that variable is also created. Thus, one way to create two objects, <span class="inlinecode">employee1</span> and <span class="inlinecode">employee2</span>, which contain the values <span class="inlinecode">6.50</span> and <span class="inlinecode">12.5</span> in the first object and the values <span class="inlinecode">8.00</span> and <span class="inlinecode">17.50</span> in the second object, is shown in the following code fragment.</p>
+<pre class="code onetabindent">Employee employee1 = new Employee(6.50, 12.5);
+Employee employee2 = new Employee(8.00, 17.5);</pre>
+<p>Later, we will make use of this concept to create a program.</p>
+<h4>D. Differences between Objects and Primitives</h4>
+<p>Not all variables in Java are primitives. As we just discussed, some variables are objects. In our example, we designed a class for <span class="inlinecode">Employee</span> and then created the object variables <span class="inlinecode">employee1</span> and <span class="inlinecode">employee2</span>. There are other object variables that are existing classes. These types are not defined in the core Java language and are not Java reserved words, but are defined in a Java class. Therefore, programmers can use existing classes or create their own to define types for variables. In fact, in Java it is common for programmers to define their own classes for variables to be used in their programs.</p>
+<p>Examples of object variables that are not primitive are <span class="inlinecode">String</span>, <span class="inlinecode">Integer</span>, <span class="inlinecode">Double</span>, and <span class="inlinecode">Boolean</span>. In Java, you can generally tell if a variable is an object or a primitive by the case of the first letter of the type. For example, an <span class="inlinecode">int</span> is a primitive (because the first letter of the type is lowercase), but an <span class="inlinecode">Integer</span> is an object (because the first letter of the type is uppercase). This convention is a coding standard that most Java programmers follow.</p>
+<p>Also, every primitive in Java (e.g., <span class="inlinecode">int</span> and <span class="inlinecode">boolean</span>) has a class associated with it (e.g., <span class="inlinecode">Integer</span> and <span class="inlinecode">Boolean</span>) called a <em>wrapper</em> class. A wrapper class is used to store behaviors about that type of object, such as converting a <span class="inlinecode">String</span> to <span class="inlinecode">int</span>, as with the <span class="inlinecode">parseInt</span> method used in the following code fragment:</p>
+<p class="code onetabindent">anIntNum = Integer.parseInt("89");</p>
+<p>The <span class="inlinecode">parseInt</span> method converts a <span class="inlinecode">String</span> into an <span class="inlinecode">int</span> value. Also, the <span class="inlinecode">parseInt</span> method is in the wrapper class <span class="inlinecode">Integer</span>, as shown by the placement of the <span class="inlinecode">Integer</span> class on the left-hand side of the dot operator, as we explained earlier.</p>
+<p>For <span class="inlinecode">double</span> conversion, the <span class="inlinecode">parseDouble</span> method is available. The following code fragment shows how it might be used to convert a <span class="inlinecode">String</span> into a <span class="inlinecode">double</span> value:</p>
+<p class="code onetabindent">aDoubleNum = Double.parseDouble("89.5");</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,1394 @@
+div#toolbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 10px 0 0;
+}
+
+div#popbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 25px;
+  vertical-align: bottom;
+  background-color: #6699FF;
+}
+
+div#popbar img {
+  display: inline;
+  vertical-align: top;
+}
+
+div#popbar form {
+  display: inline;
+  margin-top: 1px;
+  padding: 0px;
+}
+
+div#toolbar a {
+  overflow: hidden;
+  text-indent: -1000px;
+  font-size: 0;
+  display: block;
+  width: 147px;
+  height: 31px;
+  background: #9AC9FF url('images/teachingguide.png') 0 0;
+}
+
+div#toolbar a:hover {
+  background: #9AC9FF url('images/teachingguide.png') 0 -33px;
+}
+
+div#toolbar a:active {
+  background: #9AC9FF url('images/teachingguide.png') 0 -66px;
+}
+
+div#rmftoolbar a {
+  overflow: hidden;
+  text-indent: 00px;
+  font-size: 0;
+  display: block;
+  width: 147px;
+  height: 31px;
+  background: #9AC9FF url('images/readmefirst.png') 0 0;
+}
+
+div#rmftoolbar a:hover {
+  background: #9AC9FF url('images/readmefirst.png') 0 -33px;
+}
+
+div#rmftoolbar a:active {
+  background: #9AC9FF url('images/readmefirst.png') 0 -66px;
+}
+
+div#scrollable {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+a.au {
+  padding-right: 1.4em;
+  background: no-repeat url("icon.png") 100% 0px;
+  display: inline-block;
+}
+
+a.au.auplay {
+  background-position: 100% -64px;
+}
+
+a.au.austop {
+  background-position: 100% -128px;
+}
+
+a.au.aulock {
+  background-position: 100% -192px;
+}
+
+a.au.auerror {
+  background-position: 100% -256px;
+}
+
+/*UPDATE 10-30-08, changed 10pt to 1em and other pt to em to accommodate change for JAPN 114*/
+body {
+  padding: 0 25px 20px 20px;
+  margin: 0 auto;
+  max-width: 768px;
+  font-family: Verdana, sans-serif;
+  color: black;
+  background-color: #fff;
+  font-size: 1em;
+}
+
+pre {
+  font-family: "Courier New", monospace;
+}
+
+.studentresponse {
+  font-family: Verdana, sans-serif;
+  white-space: pre; /* CSS2 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap; /* HP printers */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+  _white-space: pre; /* IE hack to re-specify in addition to word-wrap */
+  width: 600px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  color: #336699;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 125%;
+  color: #663300;
+}
+
+h2 {
+  font-size: 190%;
+}
+
+h3 {
+  font-size: 160%;
+}
+
+h4 {
+  font-size: 130%;
+}
+
+h5 {
+  font-size: 100%;
+}
+
+h6 {
+  font-size: 90%;
+}
+
+/*ruby { font-size: 1.2em; }*/
+rt {
+  font-size: .6em;
+  text-decoration: none
+}
+
+.answer {
+  font-size: 1.2em;
+  font-family: Verdana, sans-serif;
+  color: #336699;
+  font-weight: bold;
+  font-style: normal;
+  margin-left: 0;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  vertical-align: top;
+}
+
+.fixedwidthfont {
+  font-size: .8em;
+  font-family: "Courier New", monospace;
+  vertical-align: top;
+}
+
+th {
+  background-color: #ccdded;
+  vertical-align: top;
+  text-align: center;
+}
+
+td ul.box, td ol.box {
+  margin-left: 20px;
+}
+
+.NumberedListplgl {
+  font-size: 12px;
+  color: #000000;
+  line-height: 24px;
+  left: 0px;
+  margin-left: 0px;
+}
+
+.caption {
+  text-align: left;
+  color: #000;
+  font-size: .6em;
+  font-weight: normal;
+}
+
+blockquote50 {
+  text-align: center;
+  margin-right: 75pt;
+  margin-left: 100pt;
+}
+
+.beigebox {
+  background-color: #fff6cc;
+  padding: 5px;
+  border: 1px solid #663300;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-indent: 0px;
+}
+
+.bluebox {
+  background-color: #ccdded;
+  padding: 5px;
+  border: 1px solid #336699;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-indent: 0px;
+}
+
+.bluebox p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.bluebox td {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 0;
+}
+
+.ltbluebox {
+  background-color: #E8F3FF;
+  border: 2px #336699 solid;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 5px;
+  padding-right: 3em;
+  text-indent: 0px;
+  color: #000000;
+}
+
+.ltbluebox h1 {
+  font-size: 14pt;
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 0;
+}
+
+.ltbluebox p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.ltbluebox li {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 0;
+}
+
+.blueboxTimes {
+  background-color: #ccdded;
+  padding: 5px;
+  border: 1px solid #336699;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-indent: 0px;
+  font-size: .8em;
+  text-align: left;
+  color: #000000;
+}
+
+.blueborderbox {
+  background-color: #ffffff;
+  padding: 5px;
+  border: 2px solid #336699;
+  margin-right: 25px;
+  margin-left: 25px;
+  text-indent: 0px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.blueboxwithtableinside {
+  text-indent: 0px;
+  font-style: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.bluebox25 {
+  background-color: #ccdded;
+  padding: 5px;
+  border: 1px solid #336699;
+  margin-right: 300px;
+  margin-left: 200px;
+  text-indent: 0px;
+  text-align: left;
+  color: #000000;
+}
+
+.bluebox50 {
+  background-color: #ccdded;
+  padding: 5px;
+  border: 1px solid #336699;
+  margin-right: 100px;
+  margin-left: 100px;
+  text-indent: 0px;
+  text-align: left;
+  color: #000000;
+}
+
+.bluebox75 {
+  background-color: #ccdded;
+  padding: 5px;
+  border: 1px solid #336699;
+  margin-right: 75px;
+  margin-left: 75px;
+  text-indent: 0px;
+  text-align: left;
+  color: #000000;
+}
+
+.highlightcode {
+  font-size: 1em;
+  font-family: "Courier New", monospace;
+  color: #336699;
+  background-color: #ffff66;
+}
+
+.UCcode {
+  font-size: 1em;
+  font-family: "Courier New", monospace;
+  text-transform: uppercase;
+  color: #336699;
+}
+
+.UCinlinecode {
+  font-size: 1em;
+  font-family: "Courier New", monospace;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.copyright {
+  width: 500px;
+  color: #369;
+  background-color: #eef;
+  border: 2px solid #369;
+  margin: 1em auto 0;
+  padding: 10px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.copyright p {
+  text-align: left;
+}
+
+.copyright a {
+  color: #369;
+  font-weight: bold;
+}
+
+.copyright a:visited {
+  color: #369;
+}
+
+.copyrightblue {
+  font-size: 1em;
+  font-weight: bold;
+  color: #006B9F;
+  text-align: center;
+}
+
+.whitetxt {
+  font-size: 1em;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: normal;
+  text-align: left;
+  margin-left: 0;
+}
+
+.yellowbox {
+  background-color: #ffffcc;
+  padding: 5px;
+  border: 1px #663300 solid;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-indent: 0px;
+  text-align: left;
+}
+
+.yellowbox p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.ltyellowbox {
+  background-color: #ffffcc;
+  border: 2px #663300 solid;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 3em;
+  text-indent: 0px;
+  text-align: left;
+  color: #000000;
+}
+
+.purplebox {
+  background-color: #E8E8FF;
+  border: 2px #663399 solid;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding: 5px;
+  padding-right: 3em;
+  text-indent: 0px;
+  text-align: left;
+  color: #000000;
+}
+
+.purplebox h1 {
+  font-size: 1.5em;
+  color: #663399;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  margin-left: 0;
+}
+
+.purplebox p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.ltyellowbox h1 {
+  font-size: 1.5em;
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 0;
+}
+
+.ltyellowbox p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.yellowbox50 {
+  background-color: #ffffcc;
+  padding: 5px;
+  border: 1px #663300 solid;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  text-indent: 0px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  color: #663300;
+}
+
+.whitebox {
+  background-color: #ffffff;
+  padding: 5px;
+  border: 1px #000000 solid;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 3em;
+  text-indent: 0px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.whitebox h1 {
+  font-size: 1.5em;
+  color: #000000;
+  font-weight: bold;
+  font-style: normal;
+  margin-left: 0;
+}
+
+.whitebox p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.whitebox50 {
+  background-color: #ffffff;
+  padding: 5px;
+  border: 1px #000000 solid;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  padding-right: 3em;
+  text-indent: 0px;
+  text-align: left;
+  color: #000000;
+  width: 50em;
+}
+
+.greenbox {
+  background-color: #bad3ba;
+  padding: 5px;
+  border: 1px #666635 solid;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-right: 3em;
+  text-indent: 0px;
+  text-align: left;
+  color: #000000;
+}
+
+.greenbox p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.greenbox50 {
+  margin: 1em auto;
+  text-align: center;
+  background-color: #bad3ba;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px;
+  border: 1px #666635 solid;
+  width: 50em;
+}
+
+.ltgreenbox {
+  background-color: #efffe5;
+  padding: 5px;
+  border: 2px #336600 solid;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-right: 3em;
+  text-indent: 0px;
+  text-align: left;
+  color: #000000;
+}
+
+.ltgreenbox h1 {
+  font-size: 1.5em;
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 0;
+}
+
+.ltgreenbox p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.greenboxserif {
+  background-color: #BAD3BA;
+  padding: 5px;
+  border: 1px #666635 solid;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-indent: 0px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.peachbox {
+  background-color: #fee7ca;
+  padding: 5px;
+  padding-right: 3em;
+  border: 1px #ff9966 solid;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-indent: 0px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.peachbox50 {
+  margin: 1em auto;
+  text-align: left;
+  background-color: #fee7ca;
+  padding: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px #ff9966 solid;
+  width: 50em;
+}
+
+.peachbox50 h1 {
+  text-align: center;
+}
+
+.peachbox50 p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.ltpeachbox {
+  background-color: #fee7ca;
+  padding: 5px;
+  border: 1px #ff9966 solid;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-indent: 0px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.ltpeachbox h1 {
+  font-size: 1.5em;
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 0;
+}
+
+.ltpeachbox p {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 0;
+}
+
+.H7 {
+  color: #336699;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: underline;
+  left: 0px;
+  margin-left: 50px;
+}
+
+.menu {
+  font-size: .8em;
+}
+
+.OLdouble {
+  font-size: .8em;
+  color: #000000;
+  font-style: normal;
+  margin-left: 0px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.boldterm {
+  font-weight: bold;
+  color: #000000;
+}
+
+.plglpara {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  left: 0px;
+  margin-left: 0px;
+}
+
+.returntotop {
+  font-style: italic;
+}
+
+.title {
+  color: #663300;
+  font-weight: bold;
+  font-style: normal;
+  text-align: left;
+  margin-left: 0;
+}
+
+.ULdouble {
+  color: #000000;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 0px;
+}
+
+.headingbrown {
+  font-size: 12px;
+  color: #663300;
+  font-weight: bold;
+  font-style: normal;
+  margin-left: 0;
+  text-align: left;
+}
+
+.hangingindent {
+  font-style: normal;
+  text-align: left;
+  margin-left: 25px;
+  text-indent: -25px;
+}
+
+.apa {
+  font-style: normal;
+  text-align: left;
+  margin-right: 25px;
+  margin-left: 25px;
+  text-indent: 50px;
+}
+
+.apaReference {
+  margin-left: 25px;
+  text-indent: -25px;
+}
+
+.mouseovers {
+  text-decoration: underline;
+  color: green;
+}
+
+.mouseoversnocolor {
+  text-decoration: none;
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-size: .8em;
+}
+
+.mouseoversnocolor:hover {
+  color: green;
+  font-weight: bold;
+}
+
+.glossaryterms {
+  text-decoration: underline;
+  color: green;
+  font-weight: bold;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+button.close {
+  margin: 1em auto;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+
+/* -------------------------------------------------------------- */ /* --[ LIST STYLE ]------------------------------------------------ */ /* -------------------------------------------------------------- */
+ol.loweralpha, ol.a {
+  list-style-type: lower-alpha;
+}
+
+ol.upperalpha, ol.A {
+  list-style-type: upper-alpha;
+}
+
+ol.lowerroman, ol.i {
+  list-style-type: lower-roman;
+}
+
+ol.upperroman, ol.I {
+  list-style-type: upper-roman;
+}
+
+ol.decimal {
+  list-style-type: decimal;
+}
+
+ol.none {
+  list-style-type: none;
+}
+
+ul.disc {
+  list-style-type: disc;
+}
+
+ul.circle {
+  list-style-type: circle;
+}
+
+ul.square {
+  list-style-type: square;
+}
+
+ul.box {
+  list-style-image: url(box.gif);
+}
+
+ul.check {
+  list-style-image: url(check.png);
+}
+
+ul.none {
+  list-style-type: none;
+}
+
+ul.noindent {
+  margin-left: .8em;
+  padding-left: 2px;
+}
+
+ul li.check {
+  list-style-image: url(check.png);
+}
+
+/* -------------------------------------------------------------- */ /* --[ SPECIAL INDENTATIONS ]-------------------------------------- */ /* -------------------------------------------------------------- */
+.threespaceindent {
+  margin-left: 15px;
+}
+
+.onetabindent {
+  margin-left: 29px;
+}
+
+.twotabindent {
+  margin-left: 52px;
+}
+
+.threetabindent {
+  margin-left: 76px;
+}
+
+.fourtabindent {
+  margin-left: 100px;
+}
+
+.fivetabindent {
+  margin-left: 124px;
+}
+
+.sixtabindent {
+  margin-left: 148px;
+}
+
+.blockquote {
+  margin-left: 28px;
+  margin-right: 58px;
+}
+
+/* -------------------------------------------------------------- */ /* --[ QUIZ BOX STYLES ]--------------------------------- */ /* -------------------------------------------------------------- */
+p.grayQuizNotSubmitted {
+  border: 1px solid #aaa;
+  background: #eee;
+  color: #888;
+  margin: 0pt 20pt 0pt 20pt;
+  padding: 3pt 8pt 5pt 8pt;
+}
+
+p.grayQuizSubmitted {
+  border: 1px solid #888;
+  background: #ddd;
+  font-size: 8pt;
+  margin: 0pt 20pt 0pt 20pt;
+  padding: 3pt 8pt 5pt 8pt;
+}
+
+/* -------------------------------------------------------------- */ /* --[ SPECIAL FORMATTING STYLES ]--------------------------------- */ /* -------------------------------------------------------------- */
+.linknocolor {
+  text-decoration: none;
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-size: .8em;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.footnote {
+  font-family: Verdana, sans-serif;
+  vertical-align: sup;
+  text-decoration: none;
+  font-weight: normal;
+  color: #000000;
+}
+
+.change {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.changeital {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.red {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.redtext {
+  color: #FF0000;
+}
+
+.redtext10 {
+  color: #FF0000;
+}
+
+.bluetext10 {
+  color: #0000FF;
+}
+
+.maroontext {
+  color: #822048;
+}
+
+.greentext {
+  color: #008000;
+}
+
+.purpletext {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  color: #663399;
+}
+
+.purpletextnobold {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  color: #663399;
+}
+
+.red12ul {
+  font-family: Verdana, sans-serif;
+  text-decoration: underline;
+  font-size: 1em;
+  color: #FF0000;
+}
+
+.green12ul {
+  font-family: Verdana, sans-serif;
+  text-decoration: underline;
+  font-size: 1em;
+  color: #008000;
+}
+
+.blue12ul {
+  font-family: Verdana, sans-serif;
+  text-decoration: underline;
+  font-size: 1em;
+  color: #0000FF;
+}
+
+.blue {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  color: #0000FF;
+}
+
+.purple {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  font-size: 1em;
+  color: #9705E4;
+}
+
+.courier {
+  font-family: "Courier New", monospace;
+}
+
+/*courier style for use in headings where part of heading is code */
+.code {
+  font-size: 10pt;
+  font-family: "Courier New", monospace;
+  text-align: left; /* white-space: pre; COMMENTED OUT 4/2/O8 UNTIL WE CAN FIX ALL CMSC/CMIS COURSES */
+  color: #336699;
+}
+
+.scrollingCode {
+  overflow: auto;
+  width: 95%;
+  max-height: 500px;
+  line-height: 1.1em;
+  font-family: "Courier New", monospace;
+  font-size: 80%;
+  color: #369;
+  border: 1px dotted #CECECE;
+  padding: 5px;
+  margin: 5px;
+}
+
+.code td {
+  font-size: 10pt;
+  font-family: "Courier New", monospace;
+}
+
+.code th {
+  color: #000;
+}
+
+.code9px {
+  font-size: 9pt;
+  font-family: "Courier New", monospace;
+  color: #369;
+}
+
+.code8px {
+  font-size: 8pt;
+  font-family: "Courier New", monospace;
+  color: #369;
+}
+
+.creditline {
+  font-family: Verdana, sans-serif;
+  font-size: .7em;
+  color: #000000;
+  text-align: center;
+}
+
+.smallCreditline {
+  font-family: Verdana, sans-serif;
+  font-size: .4em;
+  color: #000000;
+  text-align: right;
+}
+
+.leftcreditline {
+  font-family: Verdana, sans-serif;
+  font-size: .7em;
+  color: #000000;
+  text-align: left;
+}
+
+.inlinecode {
+  font-family: "Courier New", monospace;
+  color: #000000;
+}
+
+.inlinecode14 {
+  font-size: 14pt;
+  font-family: "Courier New", monospace;
+  color: #000000;
+}
+
+.inlinecodelink {
+  font-family: "Courier New", monospace;
+  color: #0000ff;
+}
+
+.TimesNewRoman {
+  font-family: "Times New Roman";
+  font-size: 12pt;
+}
+
+.equation {
+  font-size: 12pt;
+  font-family: "Cambria";
+}
+
+.largeType {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.hiragana {
+  language: JA;
+  font-size: 12pt;
+  font-weight: bold;
+  font-family: "Arial Unicode MS", "MS Mincho", "MS Gothic", "Courier New";
+}
+
+.japanese {
+  language: JA;
+  font-size: 12pt;
+  font-weight: bold;
+  font-family: "MS Mincho", "Arial Unicode MS", "MS Gothic", "Courier New";
+}
+
+.japanese10 {
+  language: JA;
+  font-size: .8em;
+  font-weight: normal;
+  font-family: "MS Mincho", "Arial Unicode MS", "MS Gothic", "Courier New";
+}
+
+.japanese9 {
+  language: JA;
+  font-size: 9pt;
+  font-weight: normal;
+  font-family: "MS Mincho", "Arial Unicode MS", "MS Gothic", "Courier New";
+}
+
+.smallCaps {
+  font-variant: small-caps
+}
+
+.symbol {
+  font-family: "Lucida sans Unicode", "Arial Unicode MS", "Courier New";
+}
+
+.symbol12 {
+  font-size: 12pt;
+  font-family: "Lucida sans Unicode", "Arial Unicode MS", "Courier New";
+}
+
+.symbol14 {
+  font-size: 14pt;
+  font-family: "Lucida sans Unicode", "Arial Unicode MS", "Courier New";
+}
+
+.symbol18 {
+  font-size: 18pt;
+  font-family: "Lucida sans Unicode", "Arial Unicode MS", "Courier New";
+  vertical-align: middle;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underlined2 {
+  border-bottom: double 3px black;
+}
+
+.dashedunderlined {
+  border-bottom: dotted dashed 1px black;
+}
+
+.highlight {
+  background-color: #FF0;
+}
+
+.highlight2 {
+  background-color: #0FF;
+}
+
+.highlight3 {
+  background-color: #0F0;
+}
+
+.highlight4 {
+  background-color: #F99;
+}
+
+.highlight5 {
+  background-color: silver;
+}
+
+.lightyellow {
+  background-color: #ffff99;
+}
+
+.lightgreen {
+  background-color: #c6ffd5;
+}
+
+/* -------------------------------------------------------------- */ /* --[ COMMON TABLE PADDING STYLES ]------------------------------- */ /* --[ side order: top, right, bottom, left ]---------------------- */ /* -------------------------------------------------------------- */
+.padding0 th {
+  padding: 3px 15px 3px 15px;
+}
+
+.padding0 td {
+  padding: 0px 15px 0px 15px;
+}
+
+.padding1 th {
+  padding: 3px 35px 3px 35px;
+}
+
+.padding1 td {
+  padding: 2px 35px 2px 35px;
+}
+
+/* -------------------------------------------------------------- */ /* --[ FIGURES, EXAMPLES, TABLES STYLES ]-------------------------- */ /* -------------------------------------------------------------- */
+.figuretitle {
+  font-family: Verdana, sans-serif;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+
+.figuretitle table {
+  margin: 20px auto;
+  text-align: left;
+}
+
+.figuretitle img {
+  margin: 20px auto;
+  border: 0px;
+  clear: both;
+  display: block;
+}
+
+.figuretitle object {
+  margin: 20px auto;
+  clear: both;
+  display: block;
+}
+
+.figuretitle caption {
+  text-align: left;
+  color: #000;
+  font-weight: normal;
+}
+
+.figuretitle .note {
+  font-size: 8pt;
+  font-weight: normal;
+  width: 400px;
+  color: #036;
+}
+
+.figure {
+  font-family: Verdana, sans-serif;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+
+.figure img, .figure table, .figure object {
+  font-weight: normal;
+  margin: 10px auto 20px;
+  clear: both;
+  text-align: left;
+}
+
+.figure table th {
+  text-align: center;
+}
+
+/* -------------------------------------------------------------- */ /* --[ ALIGNMENT STYLES ]------------------------------------------ */ /* -------------------------------------------------------------- */
+.centered {
+  text-align: center;
+}
+
+.centered object, .centered button {
+  margin: 0 auto;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.right {
+  text-align: right;
+}
+
+.centered table {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.centered table th {
+  text-align: center;
+}
+
+img.left {
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+img.right {
+  margin: 0 0 10px 10px;
+  float: right;
+}
+
+.picture {
+  float: left;
+  width: 100%;
+  border: none;
+  margin: 0.2em;
+  padding: 0.2em;
+}
+
+.picture p {
+  text-align: left;
+  color: gray;
+  font-size: 7.0pt;
+  text-indent: 0;
+}
+
+.pictureright {
+  float: right;
+  width: 100%;
+  border: none;
+  margin: 0.2em;
+  padding: 0.2em;
+}
+
+.pictureright p {
+  text-align: left;
+  color: gray;
+  font-size: 7.0pt;
+  text-indent: 0;
+}
+
+table.centered td {
+  text-align: center;
+}
+
+table.center {
+  margin: auto;
+}
+
+table.left {
+  margin-left: 0px;
+}
+
+table.right {
+  margin-right: 0px;
+}
+
+table.tdmiddle td {
+  vertical-align: middle
+}
+
+table td.center {
+  text-align: center;
+}
+
+table td.left {
+  text-align: left;
+}
+
+table td.right {
+  text-align: right;
+}
+
+table td.middle {
+  vertical-align: middle
+}
+
+/*table th {  font-family: Verdana, sans-serif;*/
+/*		font-size: 10px;*/
+/*		font-weight: bold;*/
+/*		color: #000000;*/ /*}*/
+/*
+#Question1 td span {
+	background-image: url(../../../common/images/CheckMark%5B23x23px%5D.png);
+	background-repeat: no-repeat;
+}
+*/
+.clickable {
+  cursor: pointer
+}

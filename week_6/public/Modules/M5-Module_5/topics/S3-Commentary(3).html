@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Module 5 Commentary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="../../../common/umucstyle.css" type="text/css" />
+<script type="text/javascript" src="../../../common/alpha.js"></script>
+<script type="text/javascript" src="../../../common/mouseover/wide_mouseover_style.js"></script>
+<script type="text/javascript">
+<!--
+messages=new Array()
+//Write your descriptions in here.
+messages[0]=""
+messages[1]="<strong><span class\=\"inlinecode\">Method Documentation</span></strong> gives a brief description of the method. "
+messages[2]="<strong><span class\=\"inlinecode\">MethodModifiers</span></strong> tell whether this method is <span class\=\"inlinecode\">public</span> or <span class\=\"inlinecode\">private</span>. "
+messages[3]="<strong><span class\=\"inlinecode\">returnType</span></strong> gives the data type of any value returned. "
+messages[4]="<strong><span class\=\"inlinecode\">methodName</span></strong> is the name used to invoke the method. "
+messages[5]="<strong><span class\=\"inlinecode\">parmType parm1, paramType parm2, ...</span></strong> are the data used by the method to implement its behavior. "
+messages[6]="A <strong>brace</strong> begins the code block. "
+messages[7]="<strong><span class\=\"inlinecode\">type variableName = initialValue;</span></strong> defines the local variables used in the method. "
+messages[8]="<strong>The executable statements</strong> in the method are the control structures that implement the method's behavior. "
+messages[9]="<strong><span class\=\"inlinecode\">return value;</span></strong> is the return statement that returns a value and signals the end of the method. "
+messages[10]="A <strong>brace</strong> ends the code block. "
+messages[11]="To <strong>instantiate</strong> is to create an instance of the <span class\=\"inlinecode\">class</span>  "
+messages[12]="declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span> "
+messages[13]="An object <span class\=\"inlinecode\">Employee</span> is created, and its reference is assigned to <span class\=\"inlinecode\">employee1</span>. The rate of pay will be set to $6.50 per hour, and the number of hours worked will be set to 12.5."
+messages[14]="A single line declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span>, creates the object <span class\=\"inlinecode\">Employee</span>, assigns its reference to <span class\=\"inlinecode\">employee1</span>, and sets the rate of pay to $6.50 per hour and the number of hours worked to 12.5."
+messages[15]="Exceptions will be covered in another course. When <span class\=\"inlinecode\">Scanner</span> class or <span class\=\"inlinecode\">PrintWriter</span> class is invoked, &quot;throws exception&quot; must be used."
+messages[16]="creates a <span class\=\"inlinecode\">File</span> object"
+messages[17]="creates <span class\=\"inlinecode\">PrintWriter</span> "
+messages[18]="prints data to a file"
+messages[19]="Jane is owed 758.1"
+messages[20]="Tom is owed 862.68"
+messages[21]="emp1 id is 1"
+messages[22]="emp2 id is 2"
+messages[23]="total number of employees is 2"
+messages[24 ]="max is 9"
+messages[25]="c = D"
+messages[26]="c = X"
+messages[27]="CDE"
+messages[28]="s1 and s2 are equal"
+messages[29]="s1 and s2 are equivalent"
+messages[30]="s1 and s3 are equivalent"
+messages[31]="89"
+//To have more descriptions just add to the array.
+-->
+</script>
+
+</head>
+<body>
+<p></p>
+<!-- new overLIB library for mouseovers -->
+<div id="overDiv" style="position: absolute; visibility: hidden; z-index: 1000;"></div>
+<p>
+<script src="../../../common/mouseover/overlib.js" type="text/javascript">// <![CDATA[
+ overLIB (c) Erik Bosrup
+// ]]></script>
+</p>
+<h1>Module 5: Objects and Classes</h1>
+<p>In module 3 and in section II of this module, we introduced the concept of methods and variables and showed how a method could be either a class or instance method, the difference between a class and instance method being determined by the use of the static modifier. Thus, to understand class and instance variables and methods, it is first necessary to understand static modifiers.</p>
+<h4>A. The Static Modifier</h4>
+<p>We will now look at the meaning of the static modifier, the implications of its use, and how being associated with a class affects variables, methods, and constants. We will now discuss class (static) variables, class (static) methods, and class (static) constants.</p>
+<h5>Class (Static) Variables</h5>
+<p>When a variable is declared <span class="inlinecode">static</span>, it is associated with the class and not an object or instance of the class, so each static or class variable is shared by all the instances of the class. Also, because the class exists from the time the program starts execution until it completes execution, static variables exist, and are accessible, during the entire life of the program.</p>
+<p>To understand how we may take advantage of this fact, consider an application that wants to keep track of how many <span class="inlinecode">UMUC_Employee</span> objects have been created and to use this number to make an <span class="inlinecode"> employeeId</span> for each <span class="inlinecode">UMUC_Employee</span> object. The <span class="inlinecode">employeeId</span> will simply be the number of <span class="inlinecode">UMUC_Employee</span> objects already created. For this application, the number of <span class="inlinecode">UMUC_Employee</span> objects could be kept in a static variable, and this variable could be incremented in the <span class="inlinecode">UMUC_Employee</span> constructor each time a <span class="inlinecode">UMUC_Employee</span> object is created. This situation is shown in the following program.</p>
+<p>Note that the line declaring the static variable is highlighted. Move your mouse over OUTPUT to see what is printed.</p>
+<pre class="code onetabindent">/* File:    UMUC_Employee.java
+ * Author:  InstructorX
+ * Date:    dd-mm-yyyy
+ * Purpose: shows the difference between a static variable
+ *          and an instance variable
+ */
+
+public class UMUC_Employee {
+   <span class="highlight">private static int numberOfEmployees = 0;</span>
+   private int employeeId = 0;
+
+   public UMUC_Employee() {
+      employeeId = ++numberOfEmployees;
+   } // end method
+
+   public int getEmployeeId() {
+      return employeeId;
+   } // end method
+
+   public static void main(String args[]) {
+      UMUC_Employee emp1 = new UMUC_Employee();
+      UMUC_Employee emp2 = new UMUC_Employee();
+
+      System.out.println("emp1 id is " + emp1.getEmployeeId()); // <a href="javascript:;" onmouseover="overlib(messages[21])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+      System.out.println("emp2 id is " + emp2.getEmployeeId()); // <a href="javascript:;" onmouseover="overlib(messages[22])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+      System.out.println("total number of employees is " +
+                          UMUC_Employee.numberOfEmployees);     // <a href="javascript:;" onmouseover="overlib(messages[23])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+   } // end method
+} // end class
+</pre>
+<p>We can represent this situation by the diagram in figure 5.III-1.</p>
+<p class="figuretitle">Figure 5.III-1<br /> The Relationship of Class and Instance Variables</p>
+<div class="centered">
+<p><img alt="Relationship of class and instance variables. " src="../images/fig4-I-1.gif" height="305" width="349" /></p>
+</div>
+<p>In the program above, there is one copy of the <span class="inlinecode"> numberOfEmployees</span> variable, which is declared <span class="inlinecode">static</span>, but there is a copy of the <span class="inlinecode">employeeId</span> variable for each <span class="inlinecode">UMUC_Employee</span> object. Because the <span class="inlinecode">numberOfEmployees</span> variable is static, it can be used to count the number of employee objects that have been created. Figure 5.III-1 above shows that the static modifier affects a variable in the following ways:</p>
+<ul>
+<li>
+<p>If a variable is static, there is only one copy, and it is shared with all objects of that class. Static variables exist from the time the program begins execution until the program ends execution, so every reference to a static variable references the same static variable.</p>
+</li>
+<li>
+<p>If a variable is not static, it is an instance variable, and each object has its own copy of all the variables that make up that object.</p>
+</li>
+</ul>
+<p>In this section, the class (or static) variable is only used internally to the class and so is encapsulated by making it <span class="inlinecode">private</span> and accessing it only through methods. This process is similar to the way in which instance variables were made <span class="inlinecode"> private</span> in section II. But there are many valid reasons for making variables, particularly class variables, <span class="inlinecode">public</span>. We will cover some of these reasons later in this module.</p>
+<h5>Class (Static) Methods</h5>
+<p>When we introduced class methods in module 3, we said that these methods were also called <em>static</em>. The static modifier means the same thing for a method that it does for a variable; it means that the method is associated with the class and not with an instance of the class. In module 3 and in section II, we discussed the following two differences between class methods and instance methods:</p>
+<ol>
+<li>
+<p>class methods are declared with the static modifier</p>
+</li>
+<li>
+<p>Instance methods are associated with instance data for the class (e.g., an object), but class methods are not associated with any data other than the parameters passed into them.</p>
+</li>
+</ol>
+<p>An understanding of the use of <span class="inlinecode">static</span> gives insight into these two differences. The second difference (class methods are associated with a class, not an object) is a direct result of the first (class methods are declared <span class="inlinecode">static</span>). So, in reality, there is only <em>one</em> difference between class and instance methods&mdash;whether they are associated with the class or an object. This difference is then implemented through the use of the static modifier.</p>
+<p>The distinction is important. When you use a static modifier with a method, it associates that method with a class and not an instance. Therefore, static methods are class methods and do not contain, and hence cannot access, instance data. For example, the following program shows a common error made by novice programmers in Java.</p>
+<p>The line with the error is highlighted.</p>
+<pre class="code onetabindent">/* File:    UMUC_InstanceError.java
+ * Author:  InstructorX
+ * Date:    dd-mm-yyyy
+ * Purpose: show that an instance variable cannot be used
+ *          in a static method
+ */
+
+public class UMUC_InstanceError {   
+   private static int classVar = 0;
+   private int instanceVar = 0;
+
+   public static void main(String args[]) {
+      classVar = 1;    // Valid, because class variables can be
+                       // used in class methods.
+      <span class="highlight">instanceVar = 1; // Invalid, because instance variables</span>
+      <span class="highlight"> // cannot be used in class methods.</span>
+   } // end method
+} // end class
+</pre>
+<p>This program shows an instance variable, <span class="inlinecode">instanceVar</span>, being used in the <span class="inlinecode">main</span> method, which is a static method. Remember that there can be literally hundreds of instances of a class, but only one class. Therefore, the attempt to access the instance variable in the <span class="inlinecode"> main</span> (<span class="inlinecode">static</span>) method is an error in Java because the static method cannot know which of possibly thousands of copies of the instance variable to use.</p>
+<p>But whereas static methods cannot access instance variables, there is no logical reason why instance methods cannot access static variables. For example, consider the following program.</p>
+<pre class="code onetabindent">/* File:    UMUC_Variables.java     
+ * Author:  InstructorX
+ * Date:    dd-mm-yyyy
+ * Purpose: show that a class variable can be used
+ *          in an instance method
+ */
+
+public class UMUC_Variables {
+   private static int classVar = 0;
+   private int instanceVar = 0;
+
+   public void UMUC_Variables() {    
+   } // end method
+
+   public void instanceMethod() {
+      classVar = 1;    // Valid, because class variables can
+                       // be used in instance methods
+      instanceVar = 1; // Valid, because instance variables can
+                       // be used in instance methods
+   } // end method
+} // end class
+</pre>
+<p>The method <span class="inlinecode">instanceMethod</span> can access both the variables named <span class="inlinecode">classVar</span> and <span class="inlinecode">instanceVar</span>. The variable <span class="inlinecode">classVar</span> can be accessed because there is only one class associated with any object, and hence only one <span class="inlinecode">classVar</span> variable. Therefore, the reference to <span class="inlinecode">classVar</span> is unambiguous. The variable <span class="inlinecode">instanceVar</span> can be accessed in the method <span class="inlinecode">instanceMethod</span> because instance methods are associated with instances of the class, and therefore <span class="inlinecode">instanceMethod</span> knows <a href="../popups/dot_operator.html" class="popup"> which instance of the class to use to obtain a value of <span class="courier">instanceVar</span></a>.</p>
+<p>When a method is declared as an instance method in Java, it is associated with an object regardless of whether or not it uses any of the data in that object. Another error novices commonly make in Java programming is to try to use instance methods called from a static method. The following program shows this error when using methods in Java.</p>
+<p>The line with the error is highlighted.</p>
+<pre class="code onetabindent">/* File:    UMUC_MethodError.java
+ * Author:  InstructorX
+ * Date:    dd-mm-yyyy
+ * Purpose: show that an instance method cannot be called
+ *          from a static method
+ */
+
+public class UMUC_MethodError { 
+   public int max(int val1, int val2) {
+      int maxValue;
+      if (val1 &gt; val2)
+         maxValue = val1;
+      else
+         maxValue = val2;
+      return maxValue;
+   } // end method 
+
+   public static void main(String args[]) {
+      int i1 = 7, i2 = 9, i3;
+      <span class="highlight">i3 = max(i1, i2); // Invalid. The method max is an</span>
+                       <span class="highlight"> // instance method, and is not</span>
+                       <span class="highlight"> // accessible in a static method.</span>
+      System.out.println("max is " + i3); 
+   } // end method
+} // end class
+</pre>
+<p>In this program, the <span class="inlinecode">main</span> method, which is static and associated with the class, attempts to call the <span class="inlinecode"> max</span> method, which is an instance method and associated with an object. The programmer might believe that this is correct because the <span class="inlinecode"> max</span> method does not use any data associated with an object instance. But this method has not been declared <span class="inlinecode">static</span>, so it is associated with an object, regardless of how the programmer uses it. This is an error because the call to <span class="inlinecode">max</span> in the static method now needs an object when called. This method could be corrected simply by allocating an object so that it can be used, as in the following program. The corrected code is highlighted.</p>
+<pre class="code onetabindent">/* File:    UMUC_MethodError.java
+ * Author:  InstructorX
+ * Date:    dd-mm-yyyy
+ * Purpose: show that an instance method needs an object
+ *          to be called from a static method
+ */
+
+public class UMUC_MethodError {
+   public int max(int val1, int val2) {
+      int maxValue;
+      if (val1 &gt; val2)
+         maxValue = val1;
+      else
+          maxValue = val2;
+      return maxValue;
+   } // end method 
+
+   public static void main(String args[]) {
+      int i1 = 7, i2 = 9, i3;
+      <span class="highlight">UMUC_MethodError m1 = new UMUC_MethodError()</span>;
+      <span class="highlight">i3 = m1.max(i1, i2); // Now it is valid because it is</span>
+                          <span class="highlight"> // called with an object.</span>
+      System.out.println("max is " + i3);
+   } // end method
+} // end class
+</pre>
+<p>Because the <span class="inlinecode">max</span> method does not use any instance variables, however, the allocation of the object to use the <span class="inlinecode">max</span> method is really a wasted step, necessitated only by the programmer declaring the method an instance method. In cases where a method does not use any data from the instance, it is usually best to simply associate the method with a class, as in the following program.</p>
+<p>Move your mouse over OUTPUT to see what is printed.</p>
+<pre class="code onetabindent">/* File:    UMUC_MethodError.java
+ * Author:  InstructorX
+ * Date:    dd-mm-yyyy
+ * Purpose: show that a method that does not use instance data
+ *          should be a class method
+ */
+
+public class UMUC_MethodError { 
+
+   public <span class="highlight">static</span>  int max(int val1, int val2) {
+      int maxValue;
+      if (val1 &gt; val2)
+         maxValue = val1;
+      else
+         maxValue = val2;
+      return maxValue;
+   } // end method 
+
+   public static void main(String args[]) {
+      int i1 = 7, i2 = 9, i3;
+      <span class="highlight">i3 = max(i1, i2); // max is defined as a class method,</span>
+      <span class="highlight"> // so this call is now valid.</span>
+      System.out.println("max is " + i3); // <a href="javascript:;" onmouseover="overlib(messages[24])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+   } // end method
+} // end class
+</pre>
+<h5>Class (Static) Constants</h5>
+<p>In module 1, we saw that it is possible to create constants by declaring a variable <span class="inlinecode">final</span>. For example, the constant <span class="inlinecode">PI</span> could be declared in the class <span class="inlinecode">MyMath</span> as:</p>
+<pre class="code onetabindent">public class MyMath {
+   public final int PI = 3.l4159;
+}
+</pre>
+<p>This declaration of <span class="inlinecode">PI</span> creates a <span class="inlinecode">public</span> constant. You would almost never see this type of declaration, however, in a Java program written by an experienced Java programmer. In Java, <span class="inlinecode">public</span> constants are almost always declared using the static modifier. The rationale for doing so is the same as for the use of the static modifier for class methods in the previous section.</p>
+<p>For example, suppose a programmer wanted to use the constant <span class="inlinecode">PI</span> from the <span class="inlinecode">MyMath </span> class given above. To use the constant, an instance of the class<span class="inlinecode"> MyMath</span> would have to first be created, as shown below.</p>
+<pre class="code onetabindent">public class BadlyUsedConstant {
+   public static void main(String args[]) {
+      double area, radius = 2;
+      MyMath myMath = new MyMath();
+      area = radius * radius * myMath.PI;
+   }
+} 
+</pre>
+<p>There is no reason to create an instance of the class<span class="inlinecode"> MyMath</span> except to use the constant <span class="inlinecode">PI</span>. Creating the <span class="inlinecode">myMath</span> object is simply confusing, serves no purpose, and wastes computer resources. It is always best in these situations to simply make <span class="inlinecode">public</span> constants static variables so that they can be used in other classes without instantiating an object. For example, a correct definition of the constant <span class="inlinecode">PI</span> in the class <span class="inlinecode">MyMath</span> would be as follows:</p>
+<pre class="code onetabindent">public class MyMath {
+   public static final int PI = 3.l4159;
+}
+</pre>
+<p>The variable <span class="inlinecode">PI</span> can now be used as a class variable, as shown below:</p>
+<pre class="code onetabindent">public class CorrectConstant {
+   public static void main(String args[]) {
+      double area, radius = 2;
+      area = radius * radius * MyMath.PI;
+   }
+}
+</pre>
+<p>A good rule is:</p>
+<p class="onetabindent">Constants for a class should always be declared <span class="inlinecode">static</span> in Java.</p>
+<p>In fact, for efficiency reasons, it is usually better to use the static modifier with any <span class="inlinecode">final</span> variables declared in the class (note that this does not apply to <span class="inlinecode">final</span> variables declared in a method). The exceptions to this rule generally involve an unusual use of objects and are beyond the scope of this course.</p>
+<p>&nbsp;</p>
+</body>
+</html>

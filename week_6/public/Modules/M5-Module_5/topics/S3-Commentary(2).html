@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Module 5 Commentary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="../../../common/umucstyle.css" type="text/css" />
+<script type="text/javascript" src="../../../common/alpha.js"></script>
+<script type="text/javascript" src="../../../common/mouseover/wide_mouseover_style.js"></script>
+<script type="text/javascript">
+<!--
+messages=new Array()
+//Write your descriptions in here.
+messages[0]=""
+messages[1]="<strong><span class\=\"inlinecode\">Method Documentation</span></strong> gives a brief description of the method. "
+messages[2]="<strong><span class\=\"inlinecode\">MethodModifiers</span></strong> tell whether this method is <span class\=\"inlinecode\">public</span> or <span class\=\"inlinecode\">private</span>. "
+messages[3]="<strong><span class\=\"inlinecode\">returnType</span></strong> gives the data type of any value returned. "
+messages[4]="<strong><span class\=\"inlinecode\">methodName</span></strong> is the name used to invoke the method. "
+messages[5]="<strong><span class\=\"inlinecode\">parmType parm1, paramType parm2, ...</span></strong> are the data used by the method to implement its behavior. "
+messages[6]="A <strong>brace</strong> begins the code block. "
+messages[7]="<strong><span class\=\"inlinecode\">type variableName = initialValue;</span></strong> defines the local variables used in the method. "
+messages[8]="<strong>The executable statements</strong> in the method are the control structures that implement the method's behavior. "
+messages[9]="<strong><span class\=\"inlinecode\">return value;</span></strong> is the return statement that returns a value and signals the end of the method. "
+messages[10]="A <strong>brace</strong> ends the code block. "
+messages[11]="To <strong>instantiate</strong> is to create an instance of the <span class\=\"inlinecode\">class</span>  "
+messages[12]="declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span> "
+messages[13]="An object <span class\=\"inlinecode\">Employee</span> is created, and its reference is assigned to <span class\=\"inlinecode\">employee1</span>. The rate of pay will be set to $6.50 per hour, and the number of hours worked will be set to 12.5."
+messages[14]="A single line declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span>, creates the object <span class\=\"inlinecode\">Employee</span>, assigns its reference to <span class\=\"inlinecode\">employee1</span>, and sets the rate of pay to $6.50 per hour and the number of hours worked to 12.5."
+messages[15]="Exceptions will be covered in another course. When <span class\=\"inlinecode\">Scanner</span> class or <span class\=\"inlinecode\">PrintWriter</span> class is invoked, \"throws exception\" must be used."
+messages[16]="creates a <span class\=\"inlinecode\">File</span> object"
+messages[17]="creates <span class\=\"inlinecode\">PrintWriter</span> "
+messages[18]="prints data to a file"
+messages[19]="Jane is owed 758.1"
+messages[20]="Tom is owed 862.68"
+messages[21]="emp1 id is 1"
+messages[22]="emp2 id is 2"
+messages[23]="total number of employees is 2"
+messages[24 ]="max is 9"
+messages[25]="c = D"
+messages[26]="c = X"
+messages[27]="CDE"
+messages[28]="s1 and s2 are equal"
+messages[29]="s1 and s2 are equivalent"
+messages[30]="s1 and s3 are equivalent"
+messages[31]="89"
+//To have more descriptions just add to the array.
+-->
+</script>
+
+</head>
+<body>
+<p></p>
+<!-- new overLIB library for mouseovers -->
+<div id="overDiv" style="position: absolute; visibility: hidden; z-index: 1000;"></div>
+<p>
+<script src="../../../common/mouseover/overlib.js" type="text/javascript">// <![CDATA[
+ overLIB (c) Erik Bosrup
+// ]]></script>
+</p>
+<h1>Module 5: Objects and Classes</h1>
+<p>One of the most powerful features of Java is not simply that it enables programmers to use predefined classes, but that it allows them to develop classes to solve problems they encounter. In this section, we will continue to describe the way to create and use classes to solve a problem.</p>
+<h4><strong>A.</strong> <strong>Class Definition</strong></h4>
+<p>Below is a framework showing the way to define a class. Click on each of the highlighted items for a discussion of that part of the framework.</p>
+<p class="figuretitle">Figure 5.II-1<br /> Framework for Defining a Class</p>
+<pre class="code onetabindent">  <a href="../popups/classModifiers.html" class="popup"><span style="background-color: #ffff99;">ClassModifiers</span></a> <a href="../popups/class.html" class="popup h250 w500"><span style="background-color: #ffff99;">class</span></a> <a href="../popups/classname.html" class="popup h500 w700"><span style="background-color: #ffff99;">ClassName</span></a> <a href="../popups/Delineating_the_Class_Block.html" class="popup h250 w500"><span style="background-color: #ffff99;">{</span></a>
+     // Instance variable definitions
+     <a href="../popups/variablemodifiers.html" class="popup h500 w700"><span style="background-color: #ffff99;">VariableModifiers</span></a> type variableName = value;
+
+     // Constructor definition(s)
+     MethodModifiers ClassName(type parm1, ...) {
+        // Local Variable Definitions
+
+        // Method Definition
+     }
+
+     // Method definition(s)
+     MethodModifiers returnType methodName(type parm1, ...) {
+        // Local Variable Definitions
+
+        // Method Definition
+     }
+  <span style="background-color: #ffff99;"><a href="../popups/Delineating_the_Class_Block.html" class="popup h250 w500">}</a></span>
+</pre>
+<h5>Instance Variables</h5>
+<p>Instance variables are used to define the data that make up an object that is an instance of a class. Instance variables are defined as part of the class and are declared inside the class block, but outside of any method. Instance variables can be of any type, including primitives and other objects, and are similar to local variables, which were discussed in section I of this module.</p>
+<p>There is one difference between instance variables and local variables. Local variables are confined to the method in which they are declared and cannot be accessed outside of that method. Instance variables can always be accessed in any method in the class in which they are defined, whether they are declared <span class="inlinecode">public</span> or <span class="inlinecode">private</span>.</p>
+<p>It is also possible to access instance variables outside of the class in which they are defined by using the modifier <span class="inlinecode">public</span> when the variable is declared. If an instance variable is declared <span class="inlinecode">private</span>, it can be used only in the class in which it is defined.</p>
+<h6>Encapsulation</h6>
+<p>Declaring instance variables <span class="inlinecode">private</span> and allowing access to them only through methods is called <em>encapsulation</em> because the variables are encapsulated in the object, and access can be restricted.</p>
+<p>Encapsulation is a powerful technique to help ensure a program is correct because all access can be controlled through methods. Things like bounds checking on the variables can thus be enforced in a program.</p>
+<p>Later in this module, we will discuss some reasons for using <span class="inlinecode">public</span> variables that are associated with a class.</p>
+<h5>Methods</h5>
+<p>Instance methods and class methods are defined in the same way, with three exceptions:</p>
+<ol>
+<li>
+<p>Class methods are normally declared <span class="inlinecode">public static</span>, and instance methods are normally declared simply <span class="inlinecode">public</span>. We will discuss the reason for this difference later.</p>
+</li>
+<li>
+<p>Instance methods use and change instance data for a specific object. The object that is operated on is the one that was used with the dot operator to call the method.<br /><br /> In many cases, two special methods, called <em>setters</em> and <em>getters</em>, are created to set and get the values of the instance data. These methods are generally named with <span class="inlinecode">set</span> or <span class="inlinecode">get</span>, followed by the name of the variable they access, although using <span class="inlinecode">set</span> or <span class="inlinecode">get</span> is not required. Some examples are:</p>
+<ul class="disc">
+<li><span class="inlinecode">setPayRate</span> and <span class="inlinecode">getPayRate</span> for the variable <span class="inlinecode">payRate</span></li>
+<li><span class="inlinecode">setHoursWorked</span> and <span class="inlinecode">getHoursWorked</span> for the variable <span class="inlinecode">hoursWorked</span><br /><br /></li>
+</ul>
+</li>
+<li>There is one special type of class method, called a <em>constructor</em>, which we will now discuss.</li>
+</ol>
+<h5>Constructors</h5>
+<p>Constructors are a special type of instance method. They differ from normal methods in the following ways:</p>
+<ul>
+<li>
+<p>Constructors must be named the same as the class name.</p>
+</li>
+<li>
+<p>Constructors do not have a <span class="inlinecode">return</span> type.</p>
+</li>
+<li>
+<p>Because constructors do not have a <span class="inlinecode">return</span> type, no <span class="inlinecode">return</span> statement is needed at the end of the method.</p>
+</li>
+<li>
+<p>Constructors are not explicitly called but are invoked when an object is created using the <span class="inlinecode">new</span> operator.</p>
+</li>
+</ul>
+<p>All classes that are used to instantiate objects must have at least one constructor. For this module, the only type of constructor to be considered is a <em>default constructor</em>, which has no parameters. This constructor will be included in all examples of programs implemented for this module.</p>
+<h4>B. A Simple Class Definition</h4>
+<p>A class is a much larger and more complicated structure than any dealt with so far, but if we explain it step by step, it is not too hard to understand. First, we will list the steps, and then we will give an example to clarify them. The steps, in order, are:</p>
+<ol>
+<li>
+<p>Build a class block, which contains the class declaration and braces to surround the definition of the class.</p>
+</li>
+<li>
+<p>Declare any data needed for the class.</p>
+</li>
+<li>
+<p>Declare and implement the constructors for the class. In this module, only the default constructor is used, so its declaration is simple.</p>
+</li>
+<li>
+<p>Define and implement any methods needed for the object. Specifically, you may need to define a setter and getter for each data item in the class. Also, you must define any other methods needed to implement behavior the class needs.</p>
+</li>
+<li>
+<p>Create a <span class="inlinecode">main</span> method to test that what you have done is correct.</p>
+</li>
+</ol>
+<p>This process looks more complicated than it actually is. The following section leads you through the steps needed to implement a simple object.</p>
+<h4><strong>C. Implementing a Simple Object</strong></h4>
+<h5><strong>Problem Definition</strong></h5>
+<p>There is a small company with two employees, Tom and Jane. Each employee has:</p>
+<ul class="disc">
+<li>a pay rate per hour that he or she works</li>
+<li>a number of hours that he or she works</li>
+</ul>
+<p>We wish to create an object for each employee that stores the pay rate and hours worked. We then want to call a method to calculate the total pay that each has earned.</p>
+<h5><strong>Define the Class</strong></h5>
+<p>From this problem, we can see that the two employees have similar characteristics: they each have a pay rate and a number of hours worked. Therefore, we can <em>abstract</em> out these characteristics to create a common <span class="inlinecode">Employee </span>class that has two instances, one each for Tom and Jane.</p>
+<p>The implementation of the base <span class="inlinecode">Employee </span> class is shown in the code fragment below:</p>
+<pre class="code onetabindent">public class Employee {
+} // end class
+</pre>
+<h5>Define the Data</h5>
+<p>The next step is to define the data needed for this class. Two data fields are needed, one that stores the pay rate per hour and the other that stores the hours worked. After asking the user, we find that the pay rate per hour and the hours worked should each be stored as a <span class="inlinecode">double</span>. We now add these two data fields to the class definition. The new part of the code is highlighted.</p>
+<pre class="code onetabindent">public class  Employee {
+   <span class="highlight">private double payRate = 0.0;</span>
+   <span class="highlight">private double hoursWorked = 0.0;</span>
+} // end class 
+</pre>
+<h5>Implement the Default Constructor</h5>
+<p>The default constructor is now added to the class. Note that this is a method with no <span class="inlinecode">return</span> type and no parameters, and that it has the same name as the class. In our constructor, we will set some default values for the two instance variables. Again, the new part of the code is highlighted.</p>
+<pre class="code onetabindent">public class Employee {
+   private double payRate= 0.0;
+   private double hoursWorked = 0.0;
+
+   <span class="highlight">public Employee() {</span>
+   <span class="highlight"> payRate = 20.54;</span>
+   <span class="highlight"> hoursWorked = 40.0;</span>
+   <span class="highlight">} // end constructor</span>
+} // end class
+</pre>
+<h5>Implement Methods for Behaviors Needed by the Objects</h5>
+<p>Now, methods are written that allow the object to have the behaviors needed in the problem. These methods typically use the instance variables defined in step 3. First, two methods are needed for each instance variable, one to set the value and one to get the value. These methods are called <em>setters</em> and <em>getters</em> in Java, and they normally have the string <em>set</em> or <em>get</em> pre-pended to their name. For example, to set the number of hours worked, the method <span class="inlinecode">setHoursWorked</span> is defined.</p>
+<p>In addition to the setters and getters, there is also a need for a method to calculate the pay for the employees. This method simply multiplies the <span class="inlinecode">payRate</span> by the <span class="inlinecode">hoursWorked</span> and returns the result.</p>
+<p>The methods added to the object are shown in highlight.</p>
+<pre class="code onetabindent">public class Employee {
+   private double payRate = 0.0;
+   private double hoursWorked = 0.0;
+
+   public Employee() {
+      payRate = 20.54;
+      hoursWorked = 40.0;
+   } // end method
+
+   <span class="highlight">public void setPayRate (double rate) {</span>
+   <span class="highlight"> payRate = rate;</span>
+   <span class="highlight">} // end method</span>
+
+   <span class="highlight">public double getPayRate () {</span>
+   <span class="highlight"> return payRate;</span>
+   <span class="highlight">} // end method</span>
+
+   <span class="highlight">public void setHoursWorked(double hours) {</span>
+   <span class="highlight"> hoursWorked = hours;</span>
+   <span class="highlight">} // end method</span>
+
+   <span class="highlight">public int getHoursWorked() {</span>
+   <span class="highlight"> return hoursWorked;</span>
+   <span class="highlight">} // end method</span>
+
+
+   <span class="highlight">public double calculatePay() {</span>
+   <span class="highlight"> double pay = payRate * hoursWorked;</span>
+   <span class="highlight"> return pay;</span>
+   <span class="highlight">} // end method</span>
+} // end class
+</pre>
+<h5>Adding the <span class="courier">main</span> Method to Create a Program</h5>
+<p>Now a <span class="inlinecode">main</span> method is added to the class to create the following program, shown below in highlight. Note that the <span class="inlinecode">main</span> method creates an object for each <span class="inlinecode">Employee</span>, sets the values for the variables, and then calls the <span class="inlinecode">calculatePay</span> method to print out the amount earned by each employee.</p>
+<p>You can move your mouse over OUTPUT to see what is printed.</p>
+<pre class="code onetabindent">/* File:    UMUC_Employee.java
+ * Author:  InstructorX
+ * Date:    dd-mm-yyyy
+ * Purpose: Implement a simple Employee class
+ */
+
+public class UMUC_Employee {
+   private double payRate = 0.0;
+   private double hoursWorked = 0.0;
+
+   public UMUC_Employee() {
+      payRate= 20.54;
+      hoursWorked = 40.0;
+   } // end method
+
+   public void setPayRate(double rate) {
+      payRate = rate;
+   } // end method
+
+   public double getPayRate() {
+      return payRate;
+   } // end method
+
+   public void setHoursWorked(double hours) {
+      hoursWorked = hours;
+   } // end method
+
+   public double getHoursWorked() {
+      return hoursWorked;
+   } // end method
+
+   public double calculatePay() {
+      double pay = payRate * hoursWorked;
+      return pay;
+   } // end method
+
+   <span class="highlight">public static void main(String[]args) {</span>
+   <span class="highlight"> UMUC_Employee jane = new UMUC_Employee();</span>
+   <span class="highlight"> UMUC_Employee tom = new UMUC_Employee();</span>
+   <span class="highlight"> double pay = 0.0;</span>
+
+   <span class="highlight"> jane.setPayRate(19.95);</span>
+   <span class="highlight"> jane.setHoursWorked(38.0);</span>
+   <span class="highlight"> pay = jane.calculatePay();</span>
+   <span class="highlight"> System.out.println("Jane is owed " + pay);</span>// <a href="javascript:;" onmouseover="overlib(messages[19])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+
+   <span class="highlight"> tom.setPayRate(20.54);</span>
+   <span class="highlight"> tom.setHoursWorked(42.0);</span>
+   <span class="highlight"> pay = tom.calculatePay();</span>
+   <span class="highlight"> System.out.println("Tom is owed " + pay);</span>// <a href="javascript:;" onmouseover="overlib(messages[20])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+   <span class="highlight"> } // end method</span>
+} // end class
+</pre>
+<h4>D. Using Instance Methods</h4>
+<p>As we stated earlier, you cannot use operators on objects, so to access and change an object you must use methods that are provided with the object's class. The methods used to access and change an object are similar to the class methods discussed earlier. Methods used on objects, however, do not behave the same way every time they are called. Rather, they are dependent on the value of the data that make up the object. Because an object is an instance of a class, these methods are often called <em>instance methods</em>.</p>
+<p>As with class methods, it is often necessary to state explicitly which object the method is to use. Once again, the . (dot) operator is used to specify the particular object that is to be used for the method. Just as with class methods, the left-hand side of the . (dot) operator is the object to use, and the right-hand side is the method to be called. We created two instances of the class <span class="inlinecode">Employee</span> earlier, <span class="inlinecode">jane</span> and <span class="inlinecode">tom</span>. The data fields were <span class="inlinecode">hoursWorked</span> and <span class="inlinecode">payRate</span>. The following code fragment declares and creates the two objects:</p>
+<pre class="code onetabindent">Employee jane = new Employee();
+Employee tom = new Employee();
+</pre>
+<p>Suppose we want to print the rate of pay for Jane. The following code fragment is an example of the way to reference a data field for an object:</p>
+<p class="code onetabindent">System.out.println(jane.payRate);</p>
+<p>If we wanted to print out the pay for Tom, we would use the following code fragment, which shows the way a method for an object can be referenced:</p>
+<p class="code onetabindent">System.out.println(tom.calculatePay());</p>
+<p>&nbsp;</p>
+</body>
+</html>
