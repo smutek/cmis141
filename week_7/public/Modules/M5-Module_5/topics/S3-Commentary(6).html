@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Module 5 Commentary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="../../../common/umucstyle.css" type="text/css" />
+<script type="text/javascript" src="../../../common/alpha.js"></script>
+<script type="text/javascript" src="../../../common/mouseover/wide_mouseover_style.js"></script>
+<script type="text/javascript">
+<!--
+messages=new Array()
+//Write your descriptions in here.
+messages[0]=""
+messages[1]="<strong><span class\=\"inlinecode\">Method Documentation</span></strong> gives a brief description of the method. "
+messages[2]="<strong><span class\=\"inlinecode\">MethodModifiers</span></strong> tell whether this method is <span class\=\"inlinecode\">public</span> or <span class\=\"inlinecode\">private</span>. "
+messages[3]="<strong><span class\=\"inlinecode\">returnType</span></strong> gives the data type of any value returned. "
+messages[4]="<strong><span class\=\"inlinecode\">methodName</span></strong> is the name used to invoke the method. "
+messages[5]="<strong><span class\=\"inlinecode\">parmType parm1, paramType parm2, ...</span></strong> are the data used by the method to implement its behavior. "
+messages[6]="A <strong>brace</strong> begins the code block. "
+messages[7]="<strong><span class\=\"inlinecode\">type variableName = initialValue;</span></strong> defines the local variables used in the method. "
+messages[8]="<strong>The executable statements</strong> in the method are the control structures that implement the method's behavior. "
+messages[9]="<strong><span class\=\"inlinecode\">return value;</span></strong> is the return statement that returns a value and signals the end of the method. "
+messages[10]="A <strong>brace</strong> ends the code block. "
+messages[11]="To <strong>instantiate</strong> is to create an instance of the <span class\=\"inlinecode\">class</span>  "
+messages[12]="declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span> "
+messages[13]="An object <span class\=\"inlinecode\">Employee</span> is created, and its reference is assigned to <span class\=\"inlinecode\">employee1</span>. The rate of pay will be set to $6.50 per hour, and the number of hours worked will be set to 12.5."
+messages[14]="A single line declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span>, creates the object <span class\=\"inlinecode\">Employee</span>, assigns its reference to <span class\=\"inlinecode\">employee1</span>, and sets the rate of pay to $6.50 per hour and the number of hours worked to 12.5."
+messages[15]="Exceptions will be covered in another course. When <span class\=\"inlinecode\">Scanner</span> class or <span class\=\"inlinecode\">PrintWriter</span> class is invoked, &quot;throws exception&quot; must be used."
+messages[16]="creates a <span class\=\"inlinecode\">File</span> object"
+messages[17]="creates <span class\=\"inlinecode\">PrintWriter</span> "
+messages[18]="prints data to a file"
+messages[19]="Jane is owed 758.1"
+messages[20]="Tom is owed 862.68"
+messages[21]="emp1 id is 1"
+messages[22]="emp2 id is 2"
+messages[23]="total number of employees is 2"
+messages[24 ]="max is 9"
+messages[25]="c = D"
+messages[26]="c = X"
+messages[27]="CDE"
+messages[28]="s1 and s2 are equal"
+messages[29]="s1 and s2 are equivalent"
+messages[30]="s1 and s3 are equivalent"
+messages[31]="89"
+//To have more descriptions just add to the array.
+-->
+</script>
+
+</head>
+<body>
+<p></p>
+<!-- new overLIB library for mouseovers -->
+<div id="overDiv" style="position: absolute; visibility: hidden; z-index: 1000;"></div>
+<p>
+<script src="../../../common/mouseover/overlib.js" type="text/javascript">// <![CDATA[
+ overLIB (c) Erik Bosrup
+// ]]></script>
+</p>
+<h1>Module 5: Objects and Classes</h1>
+<h4>A. The <span class="courier">String</span> Class</h4>
+<p>In Java, there is a class named <span class="inlinecode">String</span>, which implements strings of characters, such as names and addresses. We have seen in previous sections the way to declare and create an object:</p>
+<pre class="code onetabindent">String address = new String("ABC");</pre>
+<p>One way to create two strings, <span class="inlinecode">s1</span> and <span class="inlinecode">s2</span>, which contain the values <span class="inlinecode">ABC</span> and <span class="inlinecode">DEF</span>, is shown in the following code fragment.</p>
+<pre class="code onetabindent">String s1 = new String("ABC");
+String s2 = new String("DEF");</pre>
+<p><a href="../popups/using_new_with_string_objects.html" class="popup">But we do not always have to use the <span class="courier">new</span> operator with a <span class="courier">String</span></a>.</p>
+<p>One more thing to note is the difference between <span class="inlinecode">Strings</span> and <span class="inlinecode">chars</span>. A <span class="inlinecode">char</span> is a primitive and exists in the Java language itself. It is a single data value (a single <span class="inlinecode">char</span>) of fixed size. In Java, when a <span class="inlinecode">char</span> is used as a literal, it is enclosed in single quotes. For example:</p>
+<p class="onetabindent">the literal <span class="inlinecode">'A'</span> is a <span class="inlinecode">char</span></p>
+<p>A <span class="inlinecode">String </span>is an object that is made up of one or more <span class="inlinecode">chars</span>. Even if the <span class="inlinecode">String </span> has only one <span class="inlinecode">char</span> in it, the <span class="inlinecode">String </span>is still an object and has the behavior of objects that will be defined in the next section. In Java, when a <span class="inlinecode">String</span> is used as a literal, it is enclosed in double quotes. For example:</p>
+<p class="onetabindent">the literal <span class="inlinecode">"A"</span> is a <span class="inlinecode">String</span></p>
+<p>In II-D, we discussed object methods. As with class methods, it is often necessary to state explicitly which object the method is to use. Once again, the . (dot) operator is used to specify the particular object that is to be used for the method. Just as with class methods, the left-hand side of the <span class="inlinecode">.</span> (dot) operator is the object to use, and the right-hand side is the method to be called. The following code fragment illustrates this point:</p>
+<pre class="code onetabindent">String sb1 = new String("ABC");
+String sb2 = new String("DEFGHI");
+System.out.println("The third character of sb1 is " + sb1.charAt(2));
+System.out.println("The third character of sb2 is " + sb2.charAt(2));</pre>
+<p>In the code above, the <span class="inlinecode">charAt</span> method of the <span class="inlinecode">String </span>class is run twice, and in each case the third character is taken from the <span class="inlinecode">String</span>. (Note that the index for the <span class="inlinecode">String</span> ranges from 0 to <span class="inlinecode">length()</span> &ndash; 1. The first <span class="inlinecode">char</span> in the <span class="inlinecode">String</span> is at index 0, the next at index 1, and so on.)</p>
+<p>In the first <span class="inlinecode">println</span> statement, the method <span class="inlinecode">charAt</span>, which is on the right-hand side of the <span class="inlinecode">.</span> (dot) operator, retrieves the third character from the <span class="inlinecode">String sb1</span>, which is on the left-hand side of the <span class="inlinecode">. </span> (dot) operator. Because <span class="inlinecode">sb1</span> contains the <span class="inlinecode">String ABC</span>, the third character, <span class="inlinecode">C</span>, is printed.</p>
+<p>In the second <span class="inlinecode">println</span> statement, the method <span class="inlinecode">charAt</span>, which is on the right-hand side of the <span class="inlinecode">.</span> (dot) operator, retrieves the third character from the <span class="inlinecode">String sb2</span>, which is on the left-hand side of the <span class="inlinecode">.</span> (dot) operator. Because <span class="inlinecode">sb2</span> contains the <span class="inlinecode">String ABC</span>, the third character, <span class="inlinecode">F</span>, is printed.</p>
+<p>To use an instance method, it is necessary to first allocate an object to provide a context for that method. For example, consider the following code fragment:</p>
+<pre class="code onetabindent">String sb1;
+System.out.println("The third character of sb1 is "
+                    + sb1.charAt(3));  // Invalid</pre>
+<p>This code fragment does not make sense because there is no <span class="inlinecode">String</span> to query for the third character. This situation is very different from trying to access a character outside of the range of the <span class="inlinecode">String</span>. Attempting to call a method on an object that has not been initialized never makes sense and will always result in a <em>null reference exception</em>. Because exceptions will not be covered in this course, you may consider an exception to be an error message.</p>
+<p>Some examples of using <span class="inlinecode">String</span> methods are presented in the following program. Move your mouse over OUTPUT to see what is printed.</p>
+<pre class="code onetabindent">/* File:    UMUC_ShowString.java
+ * Author:  InstructorX
+ * Date:    dd-mm-yyyy
+ * Purpose: Show some string functions
+ */
+
+public class UMUC_ShowString {
+   public static void main(String args[]) {
+      String s1 = new String("ABCDEF");
+      String s2 = new String("UVWXYZ");
+
+      // c1 is set to D, the character in
+      // s1 at position 3
+      char c1 = s1.charAt(3);
+      System.out.println("c = " + c1); // <a href="javascript:;" onmouseover="overlib(messages[25])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+
+      // c1 is set to X, the character in
+      // s2 at position 3
+      c1 = s2.charAt(3);
+      System.out.println("c = " + c1); // <a href="javascript:;" onmouseover="overlib(messages[26])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+          
+      // s3 is set to CDE, a substring of s1 from
+      // positions 2 to 5
+      String s3 = s1.substring(2,5);
+      System.out.println(s3);          // <a href="javascript:;" onmouseover="overlib(messages[27])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+      
+   } // end method
+} // end class</pre>
+<p>A complete catalog of all <span class="inlinecode">String</span> methods can be found in the Java API located at java.sun.com.</p>
+<p>We will now discuss one other important method in the <span class="inlinecode">String </span> class&mdash;the <span class="inlinecode">equals</span> method. Recall that the <span class="inlinecode">==</span> operator is used in Java to compare two objects to see if they are the same. This comparison is called <em>equality</em>.</p>
+<p>There are times, however, when what is to be checked is not that the <em> objects</em> are the same, but that the <em>values</em> contained in the objects are the same. If the values in the two objects are the same, it is said that the objects are <em>equivalent</em>. For example, consider the following program:</p>
+<pre class="code onetabindent">/* File:     UMUC_TestString.java
+ * Author:   InstructorX
+ * Date:     dd-mm-yyyy
+ * Purpose:  Test two strings for equality and equivalence
+ */
+   
+public class UMUC_TestString {
+   public static void main(String[] args) {
+      String s1 = new String("ABC");
+      String s2 = s1;
+      String s3 = new String("ABC");
+
+      if (s1 == s2)
+         System.out.println("s1 and s2 are equal");      // <a href="javascript:;" onmouseover="overlib(messages[28])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+      if (s1.equals(s2))
+         System.out.println("s1 and s2 are equivalent"); // <a href="javascript:;" onmouseover="overlib(messages[29])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+      if (s1 == s3)
+         System.out.println("s1 and s3 are equal");
+      if (s1.equals(s3))
+         System.out.println("s1 and s3 are equivalent"); // <a href="javascript:;" onmouseover="overlib(messages[30])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+   } // end method
+} // end class
+</pre>
+<p>In this program, <span class="inlinecode">Strings s1</span> and <span class="inlinecode">s2</span> are equal (they refer to the same object). Because they refer to the same object, that object must have the same value, so they are also equivalent.</p>
+<p><span class="inlinecode">Strings s1</span> and <span class="inlinecode">s3</span> refer to different objects, so they are not equal. The <span class="inlinecode">Strings s1</span> and <span class="inlinecode">s3</span> have the same data, however, so these <span class="inlinecode">Strings</span> are equivalent.</p>
+<p>In summation:</p>
+<ul>
+<li>
+<p>If two variables represent the same object, they are equal and equivalent.</p>
+</li>
+<li>
+<p>If two variables represent different objects that have the same values, they are not equal but are equivalent.</p>
+</li>
+<li>
+<p>If two variables represent different objects that have different values, they are neither equal nor equivalent.</p>
+</li>
+</ul>
+<h4>B. The <span class="courier">Character</span> Class</h4>
+<p>In I-D, we introduced wrapper classes found in the <span class="inlinecode">java.lang</span> package. Although the two examples applied to only doubles and integers, there are wrapper classes for all of the primitive data types. The <span class="inlinecode">Character</span> class has several methods that allow the manipulation of characters. For example, we can compare two characters and determine if they are equal.</p>
+<pre class="code onetabindent">Character char1 = new Character('a');
+Character char2 = new Character('b');
+char1.compareTo(char2);    // returns 1 because they are 1 unit apart
+char1.equals(char2);       // returns false because they are not equal
+</pre>
+<p>Other methods will allow us to determine if the character is a letter or a digit, or if it is uppercase or lowercase. Two methods will return either a lowercase or an uppercase character. If the <span class="inlinecode">Character</span> class is used with the <span class="inlinecode">String</span> class, it is possible to conduct several operations on the contents of the string.</p>
+<p>&nbsp;</p>
+</body>
+</html>

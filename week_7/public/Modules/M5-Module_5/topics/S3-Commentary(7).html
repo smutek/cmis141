@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Module 5 Commentary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="../../../common/umucstyle.css" type="text/css" />
+<script type="text/javascript" src="../../../common/alpha.js"></script>
+<script type="text/javascript" src="../../../common/mouseover/wide_mouseover_style.js"></script>
+<script type="text/javascript">
+<!--
+messages=new Array()
+//Write your descriptions in here.
+messages[0]=""
+messages[1]="<strong><span class\=\"inlinecode\">Method Documentation</span></strong> gives a brief description of the method. "
+messages[2]="<strong><span class\=\"inlinecode\">MethodModifiers</span></strong> tell whether this method is <span class\=\"inlinecode\">public</span> or <span class\=\"inlinecode\">private</span>. "
+messages[3]="<strong><span class\=\"inlinecode\">returnType</span></strong> gives the data type of any value returned. "
+messages[4]="<strong><span class\=\"inlinecode\">methodName</span></strong> is the name used to invoke the method. "
+messages[5]="<strong><span class\=\"inlinecode\">parmType parm1, paramType parm2, ...</span></strong> are the data used by the method to implement its behavior. "
+messages[6]="A <strong>brace</strong> begins the code block. "
+messages[7]="<strong><span class\=\"inlinecode\">type variableName = initialValue;</span></strong> defines the local variables used in the method. "
+messages[8]="<strong>The executable statements</strong> in the method are the control structures that implement the method's behavior. "
+messages[9]="<strong><span class\=\"inlinecode\">return value;</span></strong> is the return statement that returns a value and signals the end of the method. "
+messages[10]="A <strong>brace</strong> ends the code block. "
+messages[11]="To <strong>instantiate</strong> is to create an instance of the <span class\=\"inlinecode\">class</span>  "
+messages[12]="declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span> "
+messages[13]="An object <span class\=\"inlinecode\">Employee</span> is created, and its reference is assigned to <span class\=\"inlinecode\">employee1</span>. The rate of pay will be set to $6.50 per hour, and the number of hours worked will be set to 12.5."
+messages[14]="A single line declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span>, creates the object <span class\=\"inlinecode\">Employee</span>, assigns its reference to <span class\=\"inlinecode\">employee1</span>, and sets the rate of pay to $6.50 per hour and the number of hours worked to 12.5."
+messages[15]="Exceptions will be covered in another course. When <span class\=\"inlinecode\">Scanner</span> class or <span class\=\"inlinecode\">PrintWriter</span> class is invoked, &quot;throws exception&quot; must be used."
+messages[16]="creates a <span class\=\"inlinecode\">File</span> object"
+messages[17]="creates <span class\=\"inlinecode\">PrintWriter</span> "
+messages[18]="prints data to a file"
+messages[19]="Jane is owed 758.1"
+messages[20]="Tom is owed 862.68"
+messages[21]="emp1 id is 1"
+messages[22]="emp2 id is 2"
+messages[23]="total number of employees is 2"
+messages[24 ]="max is 9"
+messages[25]="c = D"
+messages[26]="c = X"
+messages[27]="CDE"
+messages[28]="s1 and s2 are equal"
+messages[29]="s1 and s2 are equivalent"
+messages[30]="s1 and s3 are equivalent"
+messages[31]="89"
+//To have more descriptions just add to the array.
+-->
+</script>
+
+</head>
+<body>
+<p></p>
+<!-- new overLIB library for mouseovers -->
+<div id="overDiv" style="position: absolute; visibility: hidden; z-index: 1000;"></div>
+<p>
+<script src="../../../common/mouseover/overlib.js" type="text/javascript">// <![CDATA[
+ overLIB (c) Erik Bosrup
+// ]]></script>
+</p>
+<h1>Module 5: Objects and Classes</h1>
+<p>The <span class="inlinecode">StringBuffer</span> class is located in the <span class="inlinecode">java.lang</span> package. A major difference between the <span class="inlinecode">String</span> class and the <span class="inlinecode">StringBuffer</span> class is found in the flexibility of the latter. Once a <span class="inlinecode">String</span> object&rsquo;s value has been created, it cannot be changed. <span class="inlinecode">StringBuffer</span>, however, has the ability to change the contents by adding, inserting, or appending new material into the string buffer, as shown below.</p>
+<pre class="code onetabindent">StringBuffer sb = new StringBuffer();
+sb.append("Hello");   // inserting a string (Hello)
+sb.append(' ');       // appending a character space
+sb.append("World.");  // appending a string (World.)
+</pre>
+<p>Suppose we would like to change the period after <span class="inlinecode">World</span> to an exclamation point. After <span class="inlinecode">Hello World.</span> has been put into the object, <span class="inlinecode">sb</span>, the period is in the 11<sup>th</sup> position. Because the index runs from 0 to 11 in this string, we use the following code fragment to delete the period:</p>
+<pre class="code onetabindent">sb.deleteCharAt(11);  // deletes the period in the 11th position
+</pre>
+<p>The result is that the string is now <span class="inlinecode">Hello World</span> and we can append the exclamation point correctly at the end:</p>
+<pre class="code onetabindent">sb.append("!");  // appends the exclamation point 
+</pre>
+<p>Now the string contains:</p>
+<pre class="code onetabindent">Hello World!
+</pre>
+<p>There are many other methods found in <span class="inlinecode">StringBuffer</span> that allow us to manipulate strings.</p>
+<p>When JDK 1.5 became available, the <span class="inlinecode">StringBuilder</span> class was introduced. It is almost the same as <span class="inlinecode">StringBuffer</span> and so may be used in its place. <span class="inlinecode">StringBuilder</span> is normally used when it is to be accessed by a single task. <span class="inlinecode">StringBuffer</span> can be accessed by multiple tasks.</p>
+<p>&nbsp;</p>
+</body>
+</html>

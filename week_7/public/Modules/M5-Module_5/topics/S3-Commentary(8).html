@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Module 5 Commentary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="../../../common/umucstyle.css" type="text/css" />
+<script type="text/javascript" src="../../../common/alpha.js"></script>
+<script type="text/javascript" src="../../../common/mouseover/wide_mouseover_style.js"></script>
+<script type="text/javascript">
+<!--
+messages=new Array()
+//Write your descriptions in here.
+messages[0]=""
+messages[1]="<strong><span class\=\"inlinecode\">Method Documentation</span></strong> gives a brief description of the method. "
+messages[2]="<strong><span class\=\"inlinecode\">MethodModifiers</span></strong> tell whether this method is <span class\=\"inlinecode\">public</span> or <span class\=\"inlinecode\">private</span>. "
+messages[3]="<strong><span class\=\"inlinecode\">returnType</span></strong> gives the data type of any value returned. "
+messages[4]="<strong><span class\=\"inlinecode\">methodName</span></strong> is the name used to invoke the method. "
+messages[5]="<strong><span class\=\"inlinecode\">parmType parm1, paramType parm2, ...</span></strong> are the data used by the method to implement its behavior. "
+messages[6]="A <strong>brace</strong> begins the code block. "
+messages[7]="<strong><span class\=\"inlinecode\">type variableName = initialValue;</span></strong> defines the local variables used in the method. "
+messages[8]="<strong>The executable statements</strong> in the method are the control structures that implement the method's behavior. "
+messages[9]="<strong><span class\=\"inlinecode\">return value;</span></strong> is the return statement that returns a value and signals the end of the method. "
+messages[10]="A <strong>brace</strong> ends the code block. "
+messages[11]="To <strong>instantiate</strong> is to create an instance of the <span class\=\"inlinecode\">class</span>  "
+messages[12]="declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span> "
+messages[13]="An object <span class\=\"inlinecode\">Employee</span> is created, and its reference is assigned to <span class\=\"inlinecode\">employee1</span>. The rate of pay will be set to $6.50 per hour, and the number of hours worked will be set to 12.5."
+messages[14]="A single line declares the variable <span class\=\"inlinecode\">employee1</span> to be of type <span class\=\"inlinecode\">Employee</span>, creates the object <span class\=\"inlinecode\">Employee</span>, assigns its reference to <span class\=\"inlinecode\">employee1</span>, and sets the rate of pay to $6.50 per hour and the number of hours worked to 12.5."
+messages[15]="Exceptions will be covered in another course. When <span class\=\"inlinecode\">Scanner</span> class or <span class\=\"inlinecode\">PrintWriter</span> class is invoked, &quot;throws exception&quot; must be used."
+messages[16]="creates a <span class\=\"inlinecode\">File</span> object"
+messages[17]="creates <span class\=\"inlinecode\">PrintWriter</span> "
+messages[18]="prints data to a file"
+messages[19]="Jane is owed 758.1"
+messages[20]="Tom is owed 862.68"
+messages[21]="emp1 id is 1"
+messages[22]="emp2 id is 2"
+messages[23]="total number of employees is 2"
+messages[24 ]="max is 9"
+messages[25]="c = D"
+messages[26]="c = X"
+messages[27]="CDE"
+messages[28]="s1 and s2 are equal"
+messages[29]="s1 and s2 are equivalent"
+messages[30]="s1 and s3 are equivalent"
+messages[31]="89"
+//To have more descriptions just add to the array.
+-->
+</script>
+
+</head>
+<body>
+<p></p>
+<!-- new overLIB library for mouseovers -->
+<div id="overDiv" style="position: absolute; visibility: hidden; z-index: 1000;"></div>
+<p>
+<script src="../../../common/mouseover/overlib.js" type="text/javascript">// <![CDATA[
+ overLIB (c) Erik Bosrup
+// ]]></script>
+</p>
+<h1>Module 5: Objects and Classes</h1>
+<p>In module 3, we introduced methods and described <span class="inlinecode">main</span> as a method. In fact, we began calling it the <span class="inlinecode">main</span> method. If we take a closer look at it, we will find that it is just like the other methods with parameters. The parameter used in <span class="inlinecode">main</span> is <span class="inlinecode">args</span> and it is of the <span class="inlinecode">String[]</span> type. As in other methods, it is possible to pass arguments to the <span class="inlinecode">main</span> method as shown in the following two classes.</p>
+<pre class="code onetabindent">public class Sample1 {
+   public static void main(String[] args){
+      String[] stringThing = {"Hello", "World!"};
+      Sample2.main(stringThing);
+   }
+}
+
+public class Sample2 {
+   public static void main(String[] args){
+      for (int i = 0; i &lt; args.length; i++){
+          System.out.println(args[i]);
+      }
+   }
+}
+</pre>
+<p>To run this program, you would type:</p>
+<pre class="code onetabindent">javaSample1</pre>
+<p>and your output would be:</p>
+<pre class="code onetabindent">Hello
+World!</pre>
+<p>Notice that <span class="inlinecode">Sample1</span> sends the <span class="inlinecode">stringThing</span> array to <span class="inlinecode">Sample2</span>, which then iterates through the string array, printing out each item.</p>
+<p>It is also possible to pass strings to a <span class="inlinecode">main</span> method when using the command line. Suppose we have created a program called <span class="inlinecode">BigMain</span>. In the command line, it is possible to enter the following code:</p>
+<pre class="code onetabindent">java BigMain Well Hello World!
+</pre>
+<p>Doing so will result in the three strings&mdash;<span class="inlinecode">Well</span>, <span class="inlinecode">Hello</span>, and <span class="inlinecode">World!</span>&mdash; being passed into the <span class="inlinecode">main</span> method. To pass a string containing spaces, the string must be enclosed in quotes. The following is an example with four strings&mdash;<span class="inlinecode">Well</span>, <span class="inlinecode">Hello</span>, <span class="inlinecode">World!</span>, and<span class="inlinecode"> this is it</span>. Note that the fourth string&mdash;<span class="inlinecode">this is it</span>&mdash;is enclosed in quotes to preserve the spaces.</p>
+<pre class="code onetabindent">java BigMain Well Hello World! "this is it"
+</pre>
+<p>It is possible to pass numbers, too, but they will be treated as strings. Earlier in this module, we demonstrated the way to convert a string to an integer or a double using a wrapper class:</p>
+<pre class="code onetabindent">numInt = Integer.parseInt("89");
+</pre>
+<p>Here is an example that uses the command line to pass a number as a string:</p>
+<pre class="code onetabindent">java Sample3 89
+</pre>
+<p>into the following program:</p>
+<pre class="code onetabindent">public class Sample3 {
+   public static void main(String[] args){
+      int numInt = 0;
+      numInt = Integer.parseInt(args[0]);
+      System.out.println(numInt); <a href="javascript:;" onmouseover="overlib(messages[31])" onmouseout="nd()" class="mouseovers"><span style="background-color: #ffff99;"><strong>OUTPUT</strong></span></a>
+   }
+}
+</pre>
+<p>&nbsp;</p>
+</body>
+</html>

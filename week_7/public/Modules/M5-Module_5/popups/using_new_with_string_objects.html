@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><title>Using new with String</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../../../common/umucstyle.css" type="text/css" />
+<script type="text/javascript" src="../../../common/alpha.js"></script>
+</head>
+<body>
+
+<p class="figuretitle">Using <span class="courier">new</span> with 
+<span class="courier">String</span> Objects</p>
+
+<p>Often, the <span class="inlinecode">new</span> operator is not used when 
+allocating a <span class="inlinecode">String</span> object. For example, when initializing a 
+<span class="inlinecode">String</span>, we may write:</p>
+
+<pre class="code onetabindent">String s = "ABC"</pre>
+
+<p>instead of writing:</p>
+
+<pre class="code onetabindent">String s = new String("ABC");</pre>
+
+<p>The reason that not using the <span class="inlinecode">new</span> operator 
+works is because the <span class="inlinecode">String</span> object is a special 
+object, unique in Java. When the language was implemented, the designers decided 
+to allow programmers to specify <span class="inlinecode">String</span> objects, and 
+<span class="inlinecode">String</span> objects only, as a literal string of characters. 
+Behind the scenes, Java is actually creating an object for you using the 
+<span class="inlinecode">new</span> operator. To emphasize the fact that an object is always 
+created, however, this module will always use a <span class="inlinecode">new</span> operator 
+when creating a <span class="inlinecode">String</span> object.</p>
+
+<div class="centered">
+<input type="button" value="Close" onclick="window.close();" />
+</div>
+</body>
+</html>
