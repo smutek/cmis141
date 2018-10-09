@@ -47,7 +47,9 @@ public class StateFlowersAndBirds {
         System.out.println("You entered " + cleanInput + ".");
 
         for (StateInformation stateInformation : userList) {
-          System.out.println(stateInformation.getStateName());
+          // @todo throws a null pointer exception at runtime w/o this conditional, why?
+          if(stateInformation != null)
+            System.out.println(stateInformation.getStateName());
         }
 
         programRunning = false;
