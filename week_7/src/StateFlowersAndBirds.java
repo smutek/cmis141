@@ -30,32 +30,36 @@ public class StateFlowersAndBirds {
       userInput = scannerIn.nextLine();
       cleanInput = userInput.trim();
 
+      // Evaluate Input
       if (!cleanInput.equalsIgnoreCase("none")) {
         // User input != "none"
         int stateIndex = StateInformation.getStateIndexByName(cleanInput);
-        if(stateIndex == -1) {
+        if (stateIndex == -1) {
           // This is not a state.
           System.out.println("'" + cleanInput + "' is not a state. Please try again.");
         } else {
-          // This ia a state, try to get an object!
+          // This ia a state, try to get an object
           userList[count] = new StateInformation(stateIndex);
           System.out.println(userList[count].getStateName() + " added.");
           count++;
         }
       } else {
-        // User input = "none"
-        System.out.println("You entered " + cleanInput + ".");
+        // User input = "none", start shutting down
+        System.out.println(
+            "**** Thank you *****" + "\nA summary of your choices is printed below.\n");
 
-        for (StateInformation stateInformation : userList) {
+        // Print summary list
+        for (StateInformation stateObject : userList) {
           // @todo throws a null pointer exception at runtime w/o this conditional, why?
-          if(stateInformation != null)
-            System.out.println(stateInformation.getStateName());
+          // @todo these variable names are overlapping
+          if (stateObject != null)
+            System.out.println(stateObject.printStateInfo(stateObject) + "\n");
         }
 
         programRunning = false;
       }
     }
     // Bye
-    System.out.println("Bye, user.");
+    System.out.println("Bye, user. Please visit again!");
   }
 }

@@ -1,4 +1,3 @@
-import java.util.Arrays;
 /*
  * File: StateInformation.java
  * Author: Jimmy Smutek
@@ -21,7 +20,7 @@ public class StateInformation {
     {"Alaska", "Forget-me-not", "Willow Ptarmigan"},
     {"Arizona", "Saguaro Cactus Blossom", "Cactus Wren"},
     {"Arkansas", "Apple Blossom", "Northern Mockingbird"},
-    {"Califorina", "Califorina Poppy", "California Quail"},
+    {"California", "California Poppy", "California Quail"},
     {"Colorado", "Rocky Mountian Columbine", "Lark Bunting"},
     {"Connecticut", "Mountain Laurel ", "American Robin"},
     {"Delaware", "Peach Blossom", "Delaware Blue Hen"},
@@ -57,7 +56,7 @@ public class StateInformation {
     {"Pennsylvania", "Mountain Laurel", "Ruffed Grouse"},
     {"Rhode Island", "Violet", "Rhode Island Red"},
     {"South Carolina", "Yellow Jessamine ", "Carolina Wren"},
-    {"South Dakota ", "Pasque Flower ", "Ring-necked Pheasant"},
+    {"South Dakota", "Pasque Flower ", "Ring-necked Pheasant"},
     {"Tennessee", "Iris", "Northern Mockingbird"},
     {"Texas", "Bluebonnet Sp.", "Northern Mockingbird"},
     {"Utah", "Sego Lily", "California Gull "},
@@ -68,8 +67,6 @@ public class StateInformation {
     {"Wisconsin", "Wood Violet", "American Robin"},
     {"Wyoming", "Indian Paintbrush", "Western Meadowlark"}
   };
-  // How many states have been created?
-  private static int count = 0;
 
   // No Arg Constructor
   public StateInformation() {
@@ -89,6 +86,7 @@ public class StateInformation {
 
   /**
    * Gets the ALL_STATES array index for a given state name
+   *
    * @param String stateName the name of the state
    * @return int array index
    */
@@ -100,34 +98,80 @@ public class StateInformation {
     return x;
   }
 
+  /**
+   * Formats and prints info for a given State Object
+   *
+   * @param StateInformation stateObject The StateInfo object to be formatted.
+   * @return String Formatted information about the state.
+   */
+  public String printStateInfo(StateInformation stateObject) {
+    String stateName = stateObject.getStateName();
+    String stateBird = stateObject.getStateBird();
+    String stateFlower = stateObject.getStateFlower();
+
+    return stateName + "\nState Bird: " + stateBird + "\nState Flower: " + stateFlower;
+  }
+
+  /**
+   * Gets the state name
+   *
+   * @return String
+   */
   public String getStateName() {
     return stateName;
   }
 
+  /**
+   * Gets the state bird
+   *
+   * @return String
+   */
   public String getStateBird() {
     return stateBird;
   }
 
+  /**
+   * Gets the state flower
+   *
+   * @return String
+   */
   public String getStateFlower() {
     return stateFlower;
   }
 
+  /**
+   * Gets the array index for the state
+   *
+   * @return int
+   */
   public int getStateIndex() {
     return stateIndex;
   }
 
-  public static int getCount() {
-    return count;
-  }
-
+  /**
+   * Gets the ALL_States constant
+   *
+   * @return String
+   */
+  // @todo You probably don't need this.
   public static String[][] getAllStates() {
     return ALL_STATES;
   }
 
+  /**
+   * Set the index for a state object.
+   *
+   * @param int stateIndex
+   */
   public void setStateIndex(int stateIndex) {
     this.stateIndex = stateIndex;
   }
 
+  /**
+   * To String Method
+   *
+   * @return String
+   */
   @Override
   public String toString() {
     return "StateInformation{"
