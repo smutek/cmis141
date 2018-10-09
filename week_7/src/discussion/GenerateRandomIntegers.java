@@ -1,3 +1,5 @@
+package discussion;
+
 /*
  * File: GenerateRandomInteger.java
  * Author: Jimmy Smutek
