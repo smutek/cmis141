@@ -87,7 +87,7 @@ public class StateInformation {
   /**
    * Gets the ALL_STATES array index for a given state name
    *
-   * @param String stateName the name of the state
+   * @param stateName String the name of the state
    * @return int array index
    */
   public static int getStateIndexByName(String stateName) {
@@ -101,7 +101,7 @@ public class StateInformation {
   /**
    * Formats and prints info for a given State Object
    *
-   * @param StateInformation stateObject The StateInfo object to be formatted.
+   * @param stateObject StateInformation The StateInfo object to be formatted.
    * @return String Formatted information about the state.
    */
   public String printStateInfo(StateInformation stateObject) {
@@ -161,7 +161,7 @@ public class StateInformation {
   /**
    * Set the index for a state object.
    *
-   * @param int stateIndex
+   * @param stateIndex int
    */
   public void setStateIndex(int stateIndex) {
     this.stateIndex = stateIndex;
